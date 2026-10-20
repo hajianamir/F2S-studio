@@ -1,0 +1,158 @@
+{
+  "standard": "NFPA 72",
+  "edition": "2022",
+  "rules": [
+    {
+      "id": "NFPA72-2022-17.6.3.1.1",
+      "category": "Detector Spacing",
+      "description": "Smooth ceiling smoke detector spacing shall not exceed 30 ft (9.1 m).",
+      "parameter": "smoke_detector_spacing_feet",
+      "condition": "<=",
+      "limit_value": 30.0,
+      "unit": "ft",
+      "severity": "Error"
+    },
+    {
+      "id": "NFPA72-2022-17.6.3.1.3",
+      "category": "Detector Corner Distance",
+      "description": "Distance from smoke detector to any sidewall shall not be less than 4 inches.",
+      "parameter": "detector_wall_distance_inches",
+      "condition": ">=",
+      "limit_value": 4.0,
+      "unit": "in",
+      "severity": "Error"
+    },
+    {
+      "id": "NFPA72-2022-17.6.3.5.1",
+      "category": "Air Movement",
+      "description": "Smoke detectors shall not be located directly in the airstream of supply air diffusers (minimum 36 in distance).",
+      "parameter": "diffuser_clearance_inches",
+      "condition": ">=",
+      "limit_value": 36.0,
+      "unit": "in",
+      "severity": "Warning"
+    },
+    {
+      "id": "NFPA72-2022-18.4.1.2",
+      "category": "Audible Notification",
+      "description": "Public mode audible notification appliances shall produce a sound level at least 15 dBA above average ambient sound level.",
+      "parameter": "audible_sound_level_margin_dba",
+      "condition": ">=",
+      "limit_value": 15.0,
+      "unit": "dBA",
+      "severity": "Error"
+    },
+    {
+      "id": "NFPA72-2022-18.4.1.3",
+      "category": "Audible Sound Level",
+      "description": "Maximum sound level for audible appliances shall not exceed 110 dBA at the minimum hearing distance.",
+      "parameter": "max_audible_sound_level_dba",
+      "condition": "<=",
+      "limit_value": 110.0,
+      "unit": "dBA",
+      "severity": "Error"
+    },
+    {
+      "id": "NFPA72-2022-18.5.5.1",
+      "category": "Visual Notification",
+      "description": "Wall-mounted visible appliances shall be mounted such that the entire lens is between 80 in. and 96 in. above finished floor.",
+      "parameter": "strobe_mounting_height_inches",
+      "condition": "between",
+      "min_value": 80.0,
+      "max_value": 96.0,
+      "unit": "in",
+      "severity": "Error"
+    },
+    {
+      "id": "NFPA72-2022-10.6.7.2.1",
+      "category": "Secondary Power Supply",
+      "description": "Secondary power supply (battery) shall provide standby power for at least 24 hours followed by 5 minutes of alarm.",
+      "parameter": "battery_standby_hours",
+      "condition": ">=",
+      "limit_value": 24.0,
+      "unit": "hours",
+      "severity": "Critical"
+    },
+    {
+      "id": "NFPA72-2022-10.6.7.2.2",
+      "category": "Secondary Power Alarm Duration",
+      "description": "Alarm operation duration for voice evacuation systems shall be at least 15 minutes.",
+      "parameter": "voice_alarm_duration_minutes",
+      "condition": ">=",
+      "limit_value": 15.0,
+      "unit": "min",
+      "severity": "Critical"
+    },
+    {
+      "id": "NFPA72-2022-10.15.1",
+      "category": "NAC Voltage Drop",
+      "description": "End-of-line voltage on NAC circuits shall not drop below 20.4 V (15% drop on 24 VDC nominal).",
+      "parameter": "nac_eol_voltage_volts",
+      "condition": ">=",
+      "limit_value": 20.4,
+      "unit": "V",
+      "severity": "Critical"
+    },
+    {
+      "id": "NFPA72-2022-17.7.3.1",
+      "category": "Heat Detector Spacing",
+      "description": "Linear heat detector spacing shall not exceed its listed rating (typically 30 ft).",
+      "parameter": "heat_detector_spacing_feet",
+      "condition": "<=",
+      "limit_value": 30.0,
+      "unit": "ft",
+      "severity": "Error"
+    },
+    {
+      "id": "NFPA72-2022-18.5.4.3",
+      "category": "Strobe Spacing",
+      "description": "Maximum spacing for 15 cd strobes in sleeping areas shall be 15 ft from headboard.",
+      "parameter": "sleeping_strobe_distance_feet",
+      "condition": "<=",
+      "limit_value": 15.0,
+      "unit": "ft",
+      "severity": "Error"
+    },
+    {
+      "id": "NFPA72-2022-10.6.10",
+      "category": "Battery Safety Margin",
+      "description": "Calculated battery capacity shall include a minimum 20% safety factor (margin multiplier 1.20).",
+      "parameter": "battery_safety_factor",
+      "condition": ">=",
+      "limit_value": 1.2,
+      "unit": "multiplier",
+      "severity": "Warning"
+    },
+    {
+      "id": "NFPA72-2022-23.8.5.4",
+      "category": "Initiating Device Circuits",
+      "description": "Class A initiating device circuits shall return to control panel without shared raceway.",
+      "parameter": "class_a_raceway_separation_feet",
+      "condition": ">=",
+      "limit_value": 1.0,
+      "unit": "ft",
+      "severity": "Warning"
+    },
+    {
+      "id": "NFPA72-2022-17.14.8.4",
+      "category": "Manual Pull Station Height",
+      "description": "Operable part of manual fire alarm box shall be between 42 in. and 48 in. above floor.",
+      "parameter": "pull_station_height_inches",
+      "condition": "between",
+      "min_value": 42.0,
+      "max_value": 48.0,
+      "unit": "in",
+      "severity": "Error"
+    },
+    {
+      "id": "NFPA72-2022-17.14.8.5",
+      "category": "Manual Pull Station Distance",
+      "description": "Manual fire alarm boxes shall be located within 5 ft (1.5 m) of exit doorway opening.",
+      "parameter": "pull_station_exit_distance_feet",
+      "condition": "<=",
+      "limit_value": 5.0,
+      "unit": "ft",
+      "severity": "Error"
+    }
+  ]
+}

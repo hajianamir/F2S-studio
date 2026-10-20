@@ -1,0 +1,75 @@
+{
+  "id": "BENCH-03",
+  "name": "NFPA 13R Residential Network",
+  "description": "4-sprinkler residential sprinkler layout with K=4.2",
+  "nodes": [
+    {
+      "id": "R_SRC",
+      "elevation_feet": 0.0,
+      "k_factor": 0.0,
+      "is_source": true
+    },
+    {
+      "id": "R1",
+      "elevation_feet": 8.0,
+      "k_factor": 4.2,
+      "minimum_pressure_psi": 7.0
+    },
+    {
+      "id": "R2",
+      "elevation_feet": 8.0,
+      "k_factor": 4.2,
+      "minimum_pressure_psi": 7.0
+    },
+    {
+      "id": "R3",
+      "elevation_feet": 8.0,
+      "k_factor": 4.2,
+      "minimum_pressure_psi": 7.0
+    },
+    {
+      "id": "R4",
+      "elevation_feet": 8.0,
+      "k_factor": 4.2,
+      "minimum_pressure_psi": 7.0
+    }
+  ],
+  "pipes": [
+    {
+      "id": "PR_FEED",
+      "start_node_id": "R_SRC",
+      "end_node_id": "R1",
+      "internal_diameter_inch": 1.25,
+      "length_feet": 30.0,
+      "c_factor": 120.0
+    },
+    {
+      "id": "PR12",
+      "start_node_id": "R1",
+      "end_node_id": "R2",
+      "internal_diameter_inch": 1.0,
+      "length_feet": 10.0,
+      "c_factor": 120.0
+    },
+    {
+      "id": "PR23",
+      "start_node_id": "R2",
+      "end_node_id": "R3",
+      "internal_diameter_inch": 1.0,
+      "length_feet": 10.0,
+      "c_factor": 120.0
+    },
+    {
+      "id": "PR34",
+      "start_node_id": "R3",
+      "end_node_id": "R4",
+      "internal_diameter_inch": 1.0,
+      "length_feet": 10.0,
+      "c_factor": 120.0
+    }
+  ],
+  "expected_results": {
+    "total_flow_gpm": 54.0,
+    "max_allowable_error_percent": 1.0
+  }
+}

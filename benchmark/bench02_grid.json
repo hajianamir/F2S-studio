@@ -1,0 +1,83 @@
+{
+  "id": "BENCH-02",
+  "name": "2x2 Looped Grid Network",
+  "description": "Hardy Cross closed loop grid verification network",
+  "nodes": [
+    {
+      "id": "SRC",
+      "elevation_feet": 0.0,
+      "k_factor": 0.0,
+      "is_source": true
+    },
+    {
+      "id": "G1",
+      "elevation_feet": 12.0,
+      "k_factor": 5.6,
+      "minimum_pressure_psi": 10.0
+    },
+    {
+      "id": "G2",
+      "elevation_feet": 12.0,
+      "k_factor": 5.6,
+      "minimum_pressure_psi": 10.0
+    },
+    {
+      "id": "G3",
+      "elevation_feet": 12.0,
+      "k_factor": 5.6,
+      "minimum_pressure_psi": 10.0
+    },
+    {
+      "id": "G4",
+      "elevation_feet": 12.0,
+      "k_factor": 5.6,
+      "minimum_pressure_psi": 10.0
+    }
+  ],
+  "pipes": [
+    {
+      "id": "P_FEED",
+      "start_node_id": "SRC",
+      "end_node_id": "G1",
+      "internal_diameter_inch": 2.5,
+      "length_feet": 40.0,
+      "c_factor": 120.0
+    },
+    {
+      "id": "P12",
+      "start_node_id": "G1",
+      "end_node_id": "G2",
+      "internal_diameter_inch": 1.5,
+      "length_feet": 20.0,
+      "c_factor": 120.0
+    },
+    {
+      "id": "P24",
+      "start_node_id": "G2",
+      "end_node_id": "G4",
+      "internal_diameter_inch": 1.5,
+      "length_feet": 20.0,
+      "c_factor": 120.0
+    },
+    {
+      "id": "P43",
+      "start_node_id": "G4",
+      "end_node_id": "G3",
+      "internal_diameter_inch": 1.5,
+      "length_feet": 20.0,
+      "c_factor": 120.0
+    },
+    {
+      "id": "P31",
+      "start_node_id": "G3",
+      "end_node_id": "G1",
+      "internal_diameter_inch": 1.5,
+      "length_feet": 20.0,
+      "c_factor": 120.0
+    }
+  ],
+  "expected_results": {
+    "is_loop_balanced": true,
+    "max_allowable_error_percent": 1.0
+  }
+}

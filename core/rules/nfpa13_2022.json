@@ -1,0 +1,157 @@
+{
+  "standard": "NFPA 13",
+  "edition": "2022",
+  "rules": [
+    {
+      "id": "NFPA13-2022-8.6.2.1",
+      "category": "Sprinkler Spacing",
+      "description": "Maximum coverage area per sprinkler for light hazard shall not exceed 225 sq ft.",
+      "parameter": "coverage_area_sqft",
+      "condition": "<=",
+      "limit_value": 225.0,
+      "unit": "sq ft",
+      "severity": "Error"
+    },
+    {
+      "id": "NFPA13-2022-8.6.3.1",
+      "category": "Sprinkler Spacing",
+      "description": "Maximum distance between sprinklers on branch lines for light hazard shall be 15 ft.",
+      "parameter": "sprinkler_spacing_feet",
+      "condition": "<=",
+      "limit_value": 15.0,
+      "unit": "ft",
+      "severity": "Error"
+    },
+    {
+      "id": "NFPA13-2022-8.6.3.4",
+      "category": "Sprinkler Spacing",
+      "description": "Minimum distance between sprinklers shall be 6 ft to prevent cold soldering.",
+      "parameter": "sprinkler_spacing_feet",
+      "condition": ">=",
+      "limit_value": 6.0,
+      "unit": "ft",
+      "severity": "Error"
+    },
+    {
+      "id": "NFPA13-2022-8.6.4.1",
+      "category": "Deflector Distance",
+      "description": "Distance from deflector to ceiling for unobstructed construction shall be between 1 in. and 12 in.",
+      "parameter": "deflector_distance_inches",
+      "condition": "between",
+      "min_value": 1.0,
+      "max_value": 12.0,
+      "unit": "in",
+      "severity": "Error"
+    },
+    {
+      "id": "NFPA13-2022-10.2.1",
+      "category": "Hydraulic Pressure",
+      "description": "Minimum operating pressure for any sprinkler shall not be less than 7 psi.",
+      "parameter": "min_sprinkler_pressure_psi",
+      "condition": ">=",
+      "limit_value": 7.0,
+      "unit": "psi",
+      "severity": "Critical"
+    },
+    {
+      "id": "NFPA13-2022-10.2.2",
+      "category": "Hydraulic Velocity",
+      "description": "Maximum water velocity in pipe work shall not exceed 32 ft/s to prevent erosion/cavitation.",
+      "parameter": "max_pipe_velocity_fps",
+      "condition": "<=",
+      "limit_value": 32.0,
+      "unit": "ft/s",
+      "severity": "Warning"
+    },
+    {
+      "id": "NFPA13-2022-27.2.4",
+      "category": "Pipe Sizing",
+      "description": "Minimum pipe size for branch lines in light hazard shall be 1.0 inch nominal.",
+      "parameter": "branch_line_pipe_size_inches",
+      "condition": ">=",
+      "limit_value": 1.0,
+      "unit": "in",
+      "severity": "Error"
+    },
+    {
+      "id": "NFPA13-2022-27.2.5",
+      "category": "Pipe Sizing",
+      "description": "Minimum pipe size for risers and mains shall be 1.25 inch nominal.",
+      "parameter": "main_pipe_size_inches",
+      "condition": ">=",
+      "limit_value": 1.25,
+      "unit": "in",
+      "severity": "Error"
+    },
+    {
+      "id": "NFPA13-2022-16.1.2",
+      "category": "Water Supply Duration",
+      "description": "Minimum duration of water supply for Ordinary Hazard Group 1 & 2 shall be 60 minutes.",
+      "parameter": "water_supply_duration_minutes",
+      "condition": ">=",
+      "limit_value": 60.0,
+      "unit": "min",
+      "severity": "Critical"
+    },
+    {
+      "id": "NFPA13-2022-16.1.3",
+      "category": "Hose Stream Allowance",
+      "description": "Hose stream allowance for Ordinary Hazard Group 1 shall be at least 250 GPM.",
+      "parameter": "hose_stream_allowance_gpm",
+      "condition": ">=",
+      "limit_value": 250.0,
+      "unit": "GPM",
+      "severity": "Error"
+    },
+    {
+      "id": "NFPA13-2022-8.5.5",
+      "category": "Sprinkler K-Factor",
+      "description": "Standard orifice sprinklers for light hazard shall have a minimum K-factor of 5.6.",
+      "parameter": "sprinkler_k_factor",
+      "condition": ">=",
+      "limit_value": 5.6,
+      "unit": "GPM/psi^0.5",
+      "severity": "Error"
+    },
+    {
+      "id": "NFPA13-2022-8.15.1.2.1",
+      "category": "Concealed Spaces",
+      "description": "Sprinklers are required in combustible concealed spaces exceeding 6 in. depth.",
+      "parameter": "concealed_space_depth_inches",
+      "condition": "<=",
+      "limit_value": 6.0,
+      "unit": "in",
+      "severity": "Warning"
+    },
+    {
+      "id": "NFPA13-2022-16.2.1",
+      "category": "Design Density",
+      "description": "Minimum design density for Light Hazard shall be 0.10 GPM/sq ft over 1500 sq ft.",
+      "parameter": "design_density_gpm_sqft",
+      "condition": ">=",
+      "limit_value": 0.1,
+      "unit": "GPM/sq ft",
+      "severity": "Critical"
+    },
+    {
+      "id": "NFPA13-2022-16.2.2",
+      "category": "Design Density",
+      "description": "Minimum design density for Ordinary Hazard Group 1 shall be 0.15 GPM/sq ft over 1500 sq ft.",
+      "parameter": "design_density_gpm_sqft",
+      "condition": ">=",
+      "limit_value": 0.15,
+      "unit": "GPM/sq ft",
+      "severity": "Critical"
+    },
+    {
+      "id": "NFPA13-2022-16.2.3",
+      "category": "Design Density",
+      "description": "Minimum design density for Ordinary Hazard Group 2 shall be 0.20 GPM/sq ft over 1500 sq ft.",
+      "parameter": "design_density_gpm_sqft",
+      "condition": ">=",
+      "limit_value": 0.2,
+      "unit": "GPM/sq ft",
+      "severity": "Critical"
+    }
+  ]
+}

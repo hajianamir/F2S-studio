@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "FireProtectionNetwork",
+  "type": "object",
+  "properties": {
+    "project_id": { "type": "string" },
+    "name": { "type": "string" },
+    "standard_version": { "type": "string", "default": "NFPA13-2022" },
+    "nodes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": { "type": "string" },
+          "elevation_feet": { "type": "number" },
+          "k_factor": { "type": "number", "default": 0.0 },
+          "minimum_pressure_psi": { "type": "number", "default": 0.0 },
+          "fixed_demand_gpm": { "type": "number", "default": 0.0 },
+          "is_source": { "type": "boolean", "default": false }
+        },
+        "required": ["id"]
+      }
+    },
+    "pipes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": { "type": "string" },
+          "start_node_id": { "type": "string" },
+          "end_node_id": { "type": "string" },
+          "internal_diameter_inch": { "type": "number" },
+          "length_feet": { "type": "number" },
+          "c_factor": { "type": "number", "default": 120.0 },
+          "fitting_equivalent_length_feet": { "type": "number", "default": 0.0 }
+        },
+        "required": ["id", "start_node_id", "end_node_id", "internal_diameter_inch", "length_feet"]
+      }
+    }
+  },
+  "required": ["project_id", "nodes", "pipes"]
+}

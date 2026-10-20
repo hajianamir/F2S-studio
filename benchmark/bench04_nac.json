@@ -1,0 +1,64 @@
+{
+  "id": "BENCH-04",
+  "name": "NFPA 72 NAC Circuit Benchmark",
+  "description": "2-wire Class B circuit with 10 notification strobes",
+  "nominal_voltage": 24.0,
+  "wire_gauge": 14,
+  "appliances": [
+    {
+      "id": "S1",
+      "current_draw_amp": 0.12,
+      "distance_feet": 25.0
+    },
+    {
+      "id": "S2",
+      "current_draw_amp": 0.12,
+      "distance_feet": 50.0
+    },
+    {
+      "id": "S3",
+      "current_draw_amp": 0.12,
+      "distance_feet": 75.0
+    },
+    {
+      "id": "S4",
+      "current_draw_amp": 0.12,
+      "distance_feet": 100.0
+    },
+    {
+      "id": "S5",
+      "current_draw_amp": 0.12,
+      "distance_feet": 125.0
+    },
+    {
+      "id": "S6",
+      "current_draw_amp": 0.12,
+      "distance_feet": 150.0
+    },
+    {
+      "id": "S7",
+      "current_draw_amp": 0.12,
+      "distance_feet": 175.0
+    },
+    {
+      "id": "S8",
+      "current_draw_amp": 0.12,
+      "distance_feet": 200.0
+    },
+    {
+      "id": "S9",
+      "current_draw_amp": 0.12,
+      "distance_feet": 225.0
+    },
+    {
+      "id": "S10",
+      "current_draw_amp": 0.12,
+      "distance_feet": 250.0
+    }
+  ],
+  "expected_results": {
+    "total_current_amp": 1.2,
+    "min_eol_voltage": 20.4,
+    "max_allowable_error_percent": 1.0
+  }
+}

@@ -1,0 +1,28 @@
+# Build outputs
+core/build/
+*.so
+*.a
+*.o
+*.dylib
+*.dll
+bin/
+obj/
+*.user
+
+# .NET
+backend/**/bin/
+backend/**/obj/
+.vs/
+
+# Node
+web/node_modules/
+web/dist/
+web/.vite/
+
+# Python
+__pycache__/
+*.pyc
+
+# IDEs
+.vscode/
+.idea/

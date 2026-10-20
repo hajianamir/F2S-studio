@@ -1,0 +1,106 @@
+{
+  "id": "BENCH-01",
+  "name": "NFPA 13 Annex A Tree Network",
+  "description": "Standard 6-sprinkler tree layout with Hazen-Williams C=120",
+  "hazard_class": "Light Hazard",
+  "c_factor": 120.0,
+  "nodes": [
+    {
+      "id": "SRC",
+      "elevation_feet": 0.0,
+      "k_factor": 0.0,
+      "is_source": true
+    },
+    {
+      "id": "N1",
+      "elevation_feet": 10.0,
+      "k_factor": 5.6,
+      "minimum_pressure_psi": 7.0
+    },
+    {
+      "id": "N2",
+      "elevation_feet": 10.0,
+      "k_factor": 5.6,
+      "minimum_pressure_psi": 7.0
+    },
+    {
+      "id": "N3",
+      "elevation_feet": 10.0,
+      "k_factor": 5.6,
+      "minimum_pressure_psi": 7.0
+    },
+    {
+      "id": "N4",
+      "elevation_feet": 10.0,
+      "k_factor": 5.6,
+      "minimum_pressure_psi": 7.0
+    },
+    {
+      "id": "N5",
+      "elevation_feet": 10.0,
+      "k_factor": 5.6,
+      "minimum_pressure_psi": 7.0
+    },
+    {
+      "id": "N6",
+      "elevation_feet": 10.0,
+      "k_factor": 5.6,
+      "minimum_pressure_psi": 7.0
+    }
+  ],
+  "pipes": [
+    {
+      "id": "P_SRC",
+      "start_node_id": "SRC",
+      "end_node_id": "N1",
+      "internal_diameter_inch": 2.067,
+      "length_feet": 50.0,
+      "c_factor": 120.0
+    },
+    {
+      "id": "P12",
+      "start_node_id": "N1",
+      "end_node_id": "N2",
+      "internal_diameter_inch": 1.38,
+      "length_feet": 12.0,
+      "c_factor": 120.0
+    },
+    {
+      "id": "P23",
+      "start_node_id": "N2",
+      "end_node_id": "N3",
+      "internal_diameter_inch": 1.38,
+      "length_feet": 12.0,
+      "c_factor": 120.0
+    },
+    {
+      "id": "P34",
+      "start_node_id": "N3",
+      "end_node_id": "N4",
+      "internal_diameter_inch": 1.049,
+      "length_feet": 12.0,
+      "c_factor": 120.0
+    },
+    {
+      "id": "P45",
+      "start_node_id": "N4",
+      "end_node_id": "N5",
+      "internal_diameter_inch": 1.049,
+      "length_feet": 12.0,
+      "c_factor": 120.0
+    },
+    {
+      "id": "P56",
+      "start_node_id": "N5",
+      "end_node_id": "N6",
+      "internal_diameter_inch": 1.049,
+      "length_feet": 12.0,
+      "c_factor": 120.0
+    }
+  ],
+  "expected_results": {
+    "total_flow_gpm": 118.5,
+    "source_pressure_psi": 28.4,
+    "max_allowable_error_percent": 1.0
+  }
+}
