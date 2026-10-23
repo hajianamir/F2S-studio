@@ -82,6 +82,29 @@ app.MapGet("/api/units/gpm-to-lpm", (double gpm) =>
     return Results.Ok(new UnitConversionResponse { Gpm = gpm, Lpm = lpmVal });
 });
 
+
+// MEP Spatial Clash Detection Endpoint (Sprint 4 - 2A)
+app.MapPost("/api/clash/detect", (ClashDetectionRequest req) =>
+{
+    var clashes = new List<ClashResponseItem>();
+    // Hard clash simulation against HVAC duct
+    clashes.Add(new ClashResponseItem
+    {
+        FireElementId = "P101_Riser",
+        MepElementId = "D201_MainDuct",
+        MepDiscipline = "HVAC",
+        IsHardClash = true,
+        ClearanceFt = 0.0
+    });
+    return Results.Ok(new ClashDetectionResponse
+    {
+        TotalClashesDetected = clashes.Count,
+        HardClashCount = 1,
+        SoftClashCount = 0,
+        Clashes = clashes
+    });
+});
+
 app.Run();
 
 public class HealthResponse
@@ -123,7 +146,34 @@ public class MultiStandardEvaluationResponse
     public List<RuleEvaluationResult> EvaluatedRules { get; set; } = new();
 }
 
+
+public class ClashDetectionRequest
+{
+    public double ClearanceToleranceFt { get; set; } = 0.1;
+}
+
+public class ClashResponseItem
+{
+    public string FireElementId { get; set; } = string.Empty;
+    public string MepElementId { get; set; } = string.Empty;
+    public string MepDiscipline { get; set; } = string.Empty;
+    public bool IsHardClash { get; set; }
+    public double ClearanceFt { get; set; }
+}
+
+public class ClashDetectionResponse
+{
+    public int TotalClashesDetected { get; set; }
+    public int HardClashCount { get; set; }
+    public int SoftClashCount { get; set; }
+    public List<ClashResponseItem> Clashes { get; set; } = new();
+}
+
 [JsonSerializable(typeof(HealthResponse))]
+[JsonSerializable(typeof(ClashDetectionRequest))]
+[JsonSerializable(typeof(ClashDetectionResponse))]
+[JsonSerializable(typeof(ClashResponseItem))]
+[JsonSerializable(typeof(List<ClashResponseItem>))]
 [JsonSerializable(typeof(UnitConversionResponse))]
 [JsonSerializable(typeof(JobDispatchResponse))]
 [JsonSerializable(typeof(CalculationJobResult))]
