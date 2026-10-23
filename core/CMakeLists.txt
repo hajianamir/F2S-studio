@@ -28,3 +28,8 @@ add_test(NAME TestFireAlarm COMMAND test_fire_alarm)
 add_executable(test_benchmarks tests/test_benchmarks.cpp)
 target_link_libraries(test_benchmarks PRIVATE fire_protection_core)
 add_test(NAME TestBenchmarks COMMAND test_benchmarks)
+
+if(ENABLE_COVERAGE)
+    target_compile_options(fire_protection_core PRIVATE --coverage -g -O0)
+    target_link_options(fire_protection_core PRIVATE --coverage)
+endif()
