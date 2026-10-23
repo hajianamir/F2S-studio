@@ -8,7 +8,7 @@
   - [Phase 2 Roadmap & Strategy](en/PHASE2_ROADMAP.md)
   - [Sprint 1 Checkpoint Report](en/SPRINT1_CHECKPOINT.md)
   - [Sprint 2 Checkpoint Report](en/SPRINT2_CHECKPOINT.md)
-  - [Sprint 3 & R-1/R-9 Closure Report](en/SPRINT3_R1_R9_CLOSURE.md)
+  - [Sprint 3 Checkpoint Report (R-2 & R-4 Closure)](en/SPRINT3_CHECKPOINT.md)
 
 - **فهرست مستندات فارسی (`docs/fa/`)**:
   - [سند معماری نرم‌افزار (SAD_FA)](fa/SAD_FA.md)
@@ -16,7 +16,7 @@
   - [راهنمای توسعه‌دهندگان](fa/DEVELOPER_GUIDE_FA.md)
   - [نقشه راه توسعه](fa/ROADMAP_FA.md)
   - [گزارش چک‌پوینت اسپرینت ۲](fa/SPRINT2_CHECKPOINT_FA.md)
-  - [گزارش چک‌پوینت اسپرینت ۳ و بستن ریسک R-1](fa/SPRINT3_R1_R9_CLOSURE_FA.md)
+  - [گزارش چک‌پوینت اسپرینت ۳](fa/SPRINT3_CHECKPOINT_FA.md)
 
 ---
 
