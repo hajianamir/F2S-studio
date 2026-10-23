@@ -1,0 +1,53 @@
+name: CI & Code Coverage Pipeline
+
+on:
+  push:
+    branches: [ main, "jules-*" ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up C++ Build Environment & Coverage Tools
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y cmake g++ lcov
+
+      - name: Build C++ Core with Coverage
+        run: |
+          mkdir -p core/build
+          cd core/build
+          cmake -DCMAKE_BUILD_TYPE=Debug -DENABLE_COVERAGE=ON ..
+          make -j$(nproc)
+
+      - name: Run C++ Unit Tests & Benchmarks
+        run: |
+          cd core/build
+          ctest --output-on-failure
+
+      - name: Setup .NET 8 SDK
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: "8.0.x"
+
+      - name: Run Backend .NET Tests
+        run: |
+          cp core/build/libfire_protection_core.so backend/tests/BackendTests/bin/Debug/net8.0/
+          cd backend/tests/BackendTests
+          dotnet test --configuration Debug
+
+      - name: Setup Node.js 20
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Build Web 3D Frontend
+        run: |
+          cd web
+          npm ci
+          npm run build
