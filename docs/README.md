@@ -10,7 +10,8 @@
   - [Sprint 2 Checkpoint Report](en/SPRINT2_CHECKPOINT.md)
   - [Sprint 3 Checkpoint Report (R-2 & R-4 Closure)](en/SPRINT3_CHECKPOINT.md)
   - [Sprint 4 Checkpoint Report (2A MEP Clash Detection)](en/SPRINT4_CHECKPOINT.md)
-  - [Sprint 5 Checkpoint Report (2B Seismic Bracing & Final Phase 2 Closure)](en/SPRINT5_CHECKPOINT.md)
+  - [Sprint 5 Checkpoint Report (2B Seismic Bracing)](en/SPRINT5_CHECKPOINT.md)
+  - [Phase 2 Final Closure Report (R-5, R-6, R-10, R-11 Resolved)](en/PHASE2_FINAL_CLOSURE.md)
 
 - **فهرست مستندات فارسی (`docs/fa/`)**:
   - [سند معماری نرم‌افزار (SAD_FA)](fa/SAD_FA.md)
@@ -21,6 +22,7 @@
   - [گزارش چک‌پوینت اسپرینت ۳](fa/SPRINT3_CHECKPOINT_FA.md)
   - [گزارش چک‌پوینت اسپرینت ۴](fa/SPRINT4_CHECKPOINT_FA.md)
   - [گزارش چک‌پوینت اسپرینت ۵](fa/SPRINT5_CHECKPOINT_FA.md)
+  - [گزارش بستن نهایی فاز ۲](fa/PHASE2_FINAL_CLOSURE_FA.md)
 
 ---
 

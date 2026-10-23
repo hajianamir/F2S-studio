@@ -75,7 +75,7 @@ BatteryCalculationResult FireAlarmEngine::calculate_battery_capacity(
 
     double raw_total = result.standby_amp_hours + result.alarm_amp_hours;
     result.total_required_amp_hours = raw_total;
-    result.recommended_battery_capacity_ah = raw_total * input.safety_margin_factor;
+    result.recommended_battery_capacity_ah = raw_total * std::max(input.safety_margin_factor, 1.25);
 
     return result;
 }

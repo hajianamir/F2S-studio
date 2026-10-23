@@ -8,8 +8,8 @@ namespace seismic {
 SeismicBraceResult SeismicEngine::calculate_sway_brace_load(const SeismicZoneInput& input) {
     SeismicBraceResult res;
 
-    // C_p = 0.4 * S_ds * I_p (NFPA 13 Section 18.5.9.3)
-    res.seismic_coefficient_cp = std::min(0.4 * input.short_period_spectral_acceleration_sds * input.component_importance_factor_ip, 0.50);
+    // C_p = 0.5 * S_ds * I_p per NFPA 13 (2022) Section 18.5.9.3 & Equation 18.5.9.3.1 (capped at 0.50)
+    res.seismic_coefficient_cp = std::min(0.5 * input.short_period_spectral_acceleration_sds * input.component_importance_factor_ip, 0.50);
 
     // F_pw = C_p * W_p
     res.horizontal_seismic_force_f_pw = res.seismic_coefficient_cp * input.total_pipe_weight_lbs;
