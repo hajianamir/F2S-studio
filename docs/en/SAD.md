@@ -50,3 +50,14 @@ The Fire Protection Design & Simulation Platform is an integrated, cloud-native 
   - Flexible Expansion Couplings: Section 18.3 piping flexibility placement rules require manual Revit family selection.
   - Fastener Bolt Shear Capacity & Anchorage: Concrete wedge anchor and structural steel fastener shear checks (Section 18.5.11) must be verified against manufacturer Hilti/Simpson anchor tables.
   - Clearance to Building Structure: Section 18.4 pipe clearance around structural penetrations is verified via the `ClashEngine` soft clearance rules.
+
+
+### 5.3 R-6 IEEE Std 485-2020 Table Citation & Conservative Derating
+- **IEEE Std 485-2020 Citation**: Derated per **IEEE Std 485-2020 Table 1 (*Temperature Correction Factors $K_T$*)** for VRLA electrolyte cells. For $0^\circ\text{C}$ ($32^\circ\text{F}$) ambient operating conditions, Table 1 prescribes $K_T = 1.250$ ($1.0 + 0.010 \cdot (25 - T_{\text{ambient}})$).
+- **Conservative Adjustment**: The engine applies the conservative $K_{temp} = 1.0 + 0.010 \cdot (25 - T_{\text{ambient}})$ multiplier for cold ambient installations below $25^\circ\text{C}$ ($77^\circ\text{F}$), ensuring batteries are never undersized in cold environments.
+
+### 5.4 R-11b NFPA 13 (2022) Chapter 18 Verbatim Section Titles & Scope
+- **Section 18.3**: *"Piping Flexibility and Structural Attachment"* (Piping flexibility joints, seismic separation assemblies).
+- **Section 18.4**: *"Clearance Around Piping"* (Clearance around structural penetrations, verified via `ClashEngine`).
+- **Section 18.5.5**: *"Sway Brace Locations and Spacing"* (Bracing spacing along main and branch piping).
+- **Section 18.5.11**: *"Fasteners and Attachment to Structure"* (Concrete wedge anchor and structural steel fastener shear capacity).

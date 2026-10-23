@@ -202,6 +202,27 @@ export const App: React.FC = () => {
         </button>
       </div>
 
+      {/* R-11b Seismic Scope UI Warning Banner */}
+      <div style={{
+        position: "absolute",
+        top: 16,
+        left: "50%",
+        transform: "translateX(-50%)",
+        zIndex: 20,
+        backgroundColor: "rgba(220, 38, 38, 0.9)",
+        color: "#ffffff",
+        padding: "8px 16px",
+        borderRadius: "6px",
+        fontSize: "12px",
+        fontWeight: "bold",
+        boxShadow: "0 4px 6px rgba(0, 0, 0, 0.3)",
+        border: "1px solid #ef4444"
+      }}>
+        {lang === "fa"
+          ? "تذکر مهندسی: محاسبات فقط شامل نیروی محور مهار است؛ فواصل مهاربندی مطابق بند 18.5.5 باید توسط مهندس طراح ارزیابی شود."
+          : "Engineering Notice: Engine output is force calculation only; bracing spacing/layout per NFPA 13 §18.5.5 must be validated by PE."}
+      </div>
+
       {/* Side Panel: Calculation & BCF Pinning */}
       <div
         style={{
