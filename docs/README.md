@@ -21,6 +21,7 @@
   - [Phase 3 Week 6 Checkpoint Report](en/PHASE3_WEEK6_CHECKPOINT.md)
   - [Phase 3 Week 7 Checkpoint Report](en/PHASE3_WEEK7_CHECKPOINT.md)
   - [Phase 3 Week 8 Checkpoint Report](en/PHASE3_WEEK8_CHECKPOINT.md)
+  - [Phase 3 Week 9 Checkpoint Report](en/PHASE3_WEEK9_CHECKPOINT.md)
 
 - **فهرست مستندات فارسی (`docs/fa/`)**:
   - [سند معماری نرم‌افزار (SAD_FA)](fa/SAD_FA.md)
@@ -39,6 +40,7 @@
   - [گزارش چک‌پوینت فاز ۳ هفته ۶](fa/PHASE3_WEEK6_CHECKPOINT_FA.md)
   - [گزارش چک‌پوینت فاز ۳ هفته ۷](fa/PHASE3_WEEK7_CHECKPOINT_FA.md)
   - [گزارش چک‌پوینت فاز ۳ هفته ۸](fa/PHASE3_WEEK8_CHECKPOINT_FA.md)
+  - [گزارش چک‌پوینت فاز ۳ هفته ۹](fa/PHASE3_WEEK9_CHECKPOINT_FA.md)
 
 ---
 
@@ -47,3 +49,4 @@
 - **Hydraulic Benchmark Verification Report**: [`benchmark/report.md`](../benchmark/report.md)
 - **Determinism & Floating-Point Precision Analysis**: [`determinism/report.md`](../determinism/report.md)
 - **Rule Engine Standards Coverage Matrix**: [`core/rules/coverage_matrix.md`](../core/rules/coverage_matrix.md)
+- **R-18 Visual Render Verification Document**: [`docs/artifacts/R18_RENDER_VERIFICATION.md`](docs/artifacts/R18_RENDER_VERIFICATION.md)
