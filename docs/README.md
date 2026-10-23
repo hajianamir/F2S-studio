@@ -6,6 +6,7 @@
   - [Developer Guide](en/DEVELOPER_GUIDE.md)
   - [Development Roadmap](en/ROADMAP.md)
   - [Phase 2 Roadmap & Strategy](en/PHASE2_ROADMAP.md)
+  - [Phase 3 Roadmap & Strategy](en/PHASE3_ROADMAP.md)
   - [Sprint 1 Checkpoint Report](en/SPRINT1_CHECKPOINT.md)
   - [Sprint 2 Checkpoint Report](en/SPRINT2_CHECKPOINT.md)
   - [Sprint 3 Checkpoint Report (R-2 & R-4 Closure)](en/SPRINT3_CHECKPOINT.md)
@@ -15,6 +16,7 @@
   - [Phase 3 Week 1 Residuals Report](en/PHASE3_WEEK1_CLOSURE.md)
   - [Phase 3 Week 3 Checkpoint & Position Papers](en/PHASE3_WEEK3_CHECKPOINT.md)
   - [Phase 3 Security & Regulatory Position Papers](en/PHASE3_SECURITY_REGULATORY.md)
+  - [Phase 3 Week 4 Checkpoint Report](en/PHASE3_WEEK4_CHECKPOINT.md)
 
 - **فهرست مستندات فارسی (`docs/fa/`)**:
   - [سند معماری نرم‌افزار (SAD_FA)](fa/SAD_FA.md)
@@ -28,6 +30,7 @@
   - [گزارش بستن نهایی فاز ۲](fa/PHASE2_FINAL_CLOSURE_FA.md)
   - [گزارش رفع ریسک‌های فاز ۳](fa/PHASE3_WEEK1_CLOSURE_FA.md)
   - [گزارش چک‌پوینت فاز ۳ هفته ۳](fa/PHASE3_WEEK3_CHECKPOINT_FA.md)
+  - [گزارش چک‌پوینت فاز ۳ هفته ۴](fa/PHASE3_WEEK4_CHECKPOINT_FA.md)
 
 ---
 

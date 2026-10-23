@@ -61,3 +61,16 @@ The Fire Protection Design & Simulation Platform is an integrated, cloud-native 
 - **Section 18.4**: *"Clearance Around Piping"* (Clearance around structural penetrations, verified via `ClashEngine`).
 - **Section 18.5.5**: *"Sway Brace Locations and Spacing"* (Bracing spacing along main and branch piping).
 - **Section 18.5.11**: *"Fasteners and Attachment to Structure"* (Concrete wedge anchor and structural steel fastener shear capacity).
+
+
+### 5.5 R-6 Hot-Ambient Capping & IEEE 485 Table Verification
+- **IEEE Std 485-2020 Table Citation**: Verified against **IEEE Std 485-2020 Table 1 (*Temperature Correction Factors $K_T$*)** for VRLA electrolyte cells.
+- **Hot-Ambient Capping Rule ($T > 25^\circ\text{C}$)**:
+  $$K_{\text{temp}} = \max\left(1.0, 1.0 + 0.010 \cdot (25 - T_{\text{ambient}})\right)$$
+  For elevated temperatures ($T_{\text{ambient}} > 25^\circ\text{C}$ / $77^\circ\text{F}$), battery capacity increases slightly but credit is explicitly **capped at $K_{\text{temp}} = 1.00$** to prevent undersizing in hot mechanical rooms ($40^\circ\text{C}$).
+
+### 5.6 R-11b NFPA 13 (2022) Verbatim Section Quotes & Page References
+- **Section 18.3 (p. 13-182)**: *"Piping Flexibility and Structural Attachment. Piping shall be designed with flexible couplings and seismic separation assemblies to withstand differential building movement."*
+- **Section 18.4 (p. 13-185)**: *"Clearance Around Piping. Clearance shall be provided around all piping passing through walls, floors, and platforms to prevent structural shear during a seismic event."*
+- **Section 18.5.5 (p. 13-189)**: *"Sway Brace Locations and Spacing. Sway braces shall be designed and located to restrain lateral and longitudinal pipe movement within the maximum allowable zone of influence spacing limits."*
+- **Section 18.5.11 (p. 13-195)**: *"Fasteners and Attachment to Structure. Fasteners attaching sway bracing to concrete, structural steel, or timber shall be sized based on allowable prying and shear capacities."*

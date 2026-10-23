@@ -82,3 +82,16 @@ BatteryCalculationResult FireAlarmEngine::calculate_battery_capacity(
 
 } // namespace fire_alarm
 } // namespace fire_protection
+
+namespace fire_protection {
+namespace fire_alarm {
+
+double calculate_temperature_derating_factor(double ambient_temp_c) {
+    if (ambient_temp_c >= 25.0) {
+        return 1.0; // Hot-ambient credit explicitly capped at 1.0 to prevent battery undersizing
+    }
+    return 1.0 + 0.010 * (25.0 - ambient_temp_c); // Conservative IEEE 485 Table 1 1.0%/C derating
+}
+
+} // namespace fire_alarm
+} // namespace fire_protection
