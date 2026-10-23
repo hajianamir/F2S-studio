@@ -1,5 +1,8 @@
 using System;
 using System.Collections.Concurrent;
+using System.Collections.Generic;
+using System.IO;
+using System.Text.Json;
 using System.Text.Json.Serialization;
 using CoreInterop;
 using Domain;
@@ -21,6 +24,36 @@ var calculationJobs = new ConcurrentDictionary<string, CalculationJobResult>();
 
 // Healthcheck
 app.MapGet("/api/health", () => Results.Ok(new HealthResponse { Status = "Healthy", Timestamp = DateTime.UtcNow }));
+
+// Multi-Standard Compliance Rule Verification Endpoint (NFPA 13, EN 12845, BS 9251)
+app.MapGet("/api/rules/evaluate", (string standard, double coverageAreaSqFt, double pipeVelocityFps, double minPressurePsi) =>
+{
+    var evaluatedRules = new List<RuleEvaluationResult>();
+
+    if (standard.Equals("EN12845", StringComparison.OrdinalIgnoreCase))
+    {
+        evaluatedRules.Add(new RuleEvaluationResult { RuleId = "EN12845-2020-13.2.1", IsCompliant = coverageAreaSqFt <= 226.0, Description = "Max coverage area <= 226 sq ft" });
+        evaluatedRules.Add(new RuleEvaluationResult { RuleId = "EN12845-2020-13.2.2", IsCompliant = pipeVelocityFps <= 32.8, Description = "Max pipe velocity <= 32.8 ft/s" });
+        evaluatedRules.Add(new RuleEvaluationResult { RuleId = "EN12845-2020-13.3.1", IsCompliant = minPressurePsi >= 7.25, Description = "Min operating pressure >= 7.25 psi" });
+    }
+    else if (standard.Equals("BS9251", StringComparison.OrdinalIgnoreCase))
+    {
+        evaluatedRules.Add(new RuleEvaluationResult { RuleId = "BS9251-2021-5.1.1", IsCompliant = coverageAreaSqFt <= 193.0, Description = "Max coverage area <= 193 sq ft" });
+        evaluatedRules.Add(new RuleEvaluationResult { RuleId = "BS9251-2021-5.2.3", IsCompliant = minPressurePsi >= 7.0, Description = "Min operating pressure >= 7.0 psi" });
+    }
+    else // Default NFPA 13
+    {
+        evaluatedRules.Add(new RuleEvaluationResult { RuleId = "NFPA13-2022-8.6.2.1", IsCompliant = coverageAreaSqFt <= 225.0, Description = "Max coverage area <= 225 sq ft" });
+        evaluatedRules.Add(new RuleEvaluationResult { RuleId = "NFPA13-2022-10.2.2", IsCompliant = pipeVelocityFps <= 32.0, Description = "Max pipe velocity <= 32.0 ft/s" });
+        evaluatedRules.Add(new RuleEvaluationResult { RuleId = "NFPA13-2022-10.2.1", IsCompliant = minPressurePsi >= 7.0, Description = "Min operating pressure >= 7.0 psi" });
+    }
+
+    return Results.Ok(new MultiStandardEvaluationResponse
+    {
+        Standard = standard,
+        EvaluatedRules = evaluatedRules
+    });
+});
 
 // Hydraulic calculation endpoint via C++ P/Invoke
 app.MapPost("/api/hydraulics/calculate", (FireProtectionProject proj) =>
@@ -77,10 +110,26 @@ public class CalculationJobResult
     public string Result { get; set; } = string.Empty;
 }
 
+public class RuleEvaluationResult
+{
+    public string RuleId { get; set; } = string.Empty;
+    public bool IsCompliant { get; set; }
+    public string Description { get; set; } = string.Empty;
+}
+
+public class MultiStandardEvaluationResponse
+{
+    public string Standard { get; set; } = string.Empty;
+    public List<RuleEvaluationResult> EvaluatedRules { get; set; } = new();
+}
+
 [JsonSerializable(typeof(HealthResponse))]
 [JsonSerializable(typeof(UnitConversionResponse))]
 [JsonSerializable(typeof(JobDispatchResponse))]
 [JsonSerializable(typeof(CalculationJobResult))]
+[JsonSerializable(typeof(MultiStandardEvaluationResponse))]
+[JsonSerializable(typeof(RuleEvaluationResult))]
+[JsonSerializable(typeof(List<RuleEvaluationResult>))]
 [JsonSerializable(typeof(FireProtectionProject))]
 [JsonSerializable(typeof(NetworkNode))]
 [JsonSerializable(typeof(NetworkPipe))]

@@ -1,0 +1,36 @@
+{
+  "standard": "EN 12845",
+  "edition": "2020",
+  "rules": [
+    {
+      "id": "EN12845-2020-13.2.1",
+      "category": "Sprinkler Spacing",
+      "description": "Maximum area coverage per sprinkler for LH shall not exceed 21 m^2 (226 sq ft).",
+      "parameter": "coverage_area_sqft",
+      "condition": "<=",
+      "limit_value": 226.0,
+      "unit": "sq ft",
+      "severity": "Error"
+    },
+    {
+      "id": "EN12845-2020-13.2.2",
+      "category": "Pipe Velocity",
+      "description": "Maximum water velocity in pipe work shall not exceed 10 m/s (32.8 ft/s).",
+      "parameter": "max_pipe_velocity_fps",
+      "condition": "<=",
+      "limit_value": 32.8,
+      "unit": "ft/s",
+      "severity": "Warning"
+    },
+    {
+      "id": "EN12845-2020-13.3.1",
+      "category": "Minimum Operating Pressure",
+      "description": "Minimum pressure at any operating sprinkler head shall be at least 0.5 bar (7.25 psi).",
+      "parameter": "min_sprinkler_pressure_psi",
+      "condition": ">=",
+      "limit_value": 7.25,
+      "unit": "psi",
+      "severity": "Critical"
+    }
+  ]
+}

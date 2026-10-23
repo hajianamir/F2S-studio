@@ -1,0 +1,26 @@
+{
+  "standard": "BS 9251",
+  "edition": "2021",
+  "rules": [
+    {
+      "id": "BS9251-2021-5.1.1",
+      "category": "Residential Spacing",
+      "description": "Maximum area coverage per sprinkler for Category 1 residential shall be 18 m^2 (193 sq ft).",
+      "parameter": "coverage_area_sqft",
+      "condition": "<=",
+      "limit_value": 193.0,
+      "unit": "sq ft",
+      "severity": "Error"
+    },
+    {
+      "id": "BS9251-2021-5.2.3",
+      "category": "System Operating Duration",
+      "description": "Minimum water supply duration for Category 1 residential systems shall be 10 minutes.",
+      "parameter": "water_supply_duration_minutes",
+      "condition": ">=",
+      "limit_value": 10.0,
+      "unit": "min",
+      "severity": "Critical"
+    }
+  ]
+}
