@@ -12,3 +12,6 @@
 
 3. **CSS / Z-Index / Screen Resolution Checks**:
    - Tested on $1024 \times 768$ and $1920 \times 1080$ viewports: zero clipping against side panels, full contrast ratio ($> 7:1$ white on dark red), z-index $20 > 10$ canvas header overlay.
+
+## Static Analysis Caveat
+Banner render verified by static CSS/DOM analysis only. Rendered visual output not captured (sandbox environment has no browser). Before AHJ deployment, a manual visual confirmation in Chrome/Firefox at 1024x768 and 1920x1080 is recommended to rule out CSS specificity conflicts with the Three.js canvas.

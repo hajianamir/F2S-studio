@@ -1,0 +1,17 @@
+{
+  "commit_hash": "fe06a73",
+  "total_pipe_footage_ft": 4250.0,
+  "description": "Frozen deterministic baseline layout artifact for 100k sq ft Light Hazard office reference model",
+  "pipes_summary": [
+    {
+      "id": "MAIN_01",
+      "length_ft": 250.0,
+      "diameter_in": 4.0
+    },
+    {
+      "id": "BRANCH_01_100",
+      "length_ft": 4000.0,
+      "diameter_in": 1.25
+    }
+  ]
+}
