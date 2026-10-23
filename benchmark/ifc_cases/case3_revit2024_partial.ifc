@@ -1,0 +1,13 @@
+ISO-10303-21;
+HEADER;
+FILE_DESCRIPTION(('ViewDefinition [CoordinationView]'),'2;1');
+FILE_NAME('case3_revit2024_partial.ifc','2026-10-23T09:00:00',('Revit Partial Malformed Network'),('Autodesk Revit 2024'),'Processor','Revit 2024','User');
+FILE_SCHEMA(('IFC4'));
+ENDSEC;
+DATA;
+#1=IFCPROJECT('0$W2$v$000000000000003',$,'PartialFireSystem',$,$,$,$,$,#2);
+#2=IFCUNITASSIGNMENT((#3));
+#3=IFCSIUNIT(*,.LENGTHUNIT.,$,.METRE.);
+#30=IFCPIPESEGMENT('1$W2$v$000000000000003',$,'PipeSegment_Isolated',$,$,$,$,$,.NOTDEFINED.);
+ENDSEC;
+END-ISO-10303-21;

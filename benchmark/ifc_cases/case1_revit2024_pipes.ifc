@@ -1,0 +1,17 @@
+ISO-10303-21;
+HEADER;
+FILE_DESCRIPTION(('ViewDefinition [CoordinationView]'),'2;1');
+FILE_NAME('case1_revit2024_pipes.ifc','2026-10-23T09:00:00',('Revit Fire Protection'),('Autodesk Revit 2024'),'Processor','Revit 2024','User');
+FILE_SCHEMA(('IFC4'));
+ENDSEC;
+DATA;
+#1=IFCPROJECT('0$W2$v$000000000000001',$,'FireProtectionSystem',$,$,$,$,$,#2);
+#2=IFCUNITASSIGNMENT((#3,#4));
+#3=IFCSIUNIT(*,.LENGTHUNIT.,$,.METRE.);
+#4=IFCSIUNIT(*,.PRESSUREUNIT.,$,.PASCAL.);
+#10=IFCFLOWTERMINAL('1$W2$v$000000000000001',$,'SprinklerHead_K5.6',$,$,$,$,$,.NOTDEFINED.);
+#11=IFCPROPERTYSINGLEVALUE('KFactor',$,IFCREAL(5.6),$);
+#12=IFCPROPERTYSET('2$W2$v$000000000000001',$,'Pset_FireSuppressionType',$,(#11));
+#13=IFCRELDEFINESBYPROPERTIES('3$W2$v$000000000000001',$,$,$,(#10),#12);
+ENDSEC;
+END-ISO-10303-21;

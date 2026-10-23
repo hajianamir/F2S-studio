@@ -1,0 +1,13 @@
+ISO-10303-21;
+HEADER;
+FILE_DESCRIPTION(('ViewDefinition [CoordinationView]'),'2;1');
+FILE_NAME('case2_revit2024_proxy.ifc','2026-10-23T09:00:00',('Revit Custom Proxy Sprinklers'),('Autodesk Revit 2024'),'Processor','Revit 2024','User');
+FILE_SCHEMA(('IFC4'));
+ENDSEC;
+DATA;
+#1=IFCPROJECT('0$W2$v$000000000000002',$,'FireProxySystem',$,$,$,$,$,#2);
+#2=IFCUNITASSIGNMENT((#3));
+#3=IFCSIUNIT(*,.LENGTHUNIT.,$,.METRE.);
+#20=IFCBUILDINGELEMENTPROXY('1$W2$v$000000000000002',$,'CustomSprinklerHead_Proxy',$,$,$,$,$,.NOTDEFINED.);
+ENDSEC;
+END-ISO-10303-21;
