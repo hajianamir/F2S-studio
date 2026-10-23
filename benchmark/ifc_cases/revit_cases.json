@@ -1,0 +1,5 @@
+{
+  "case1_revit_mep": "IFCFLOWTERMINAL with Pset_FireSuppressionType",
+  "case2_proxy_element": "IfcBuildingElementProxy customized sprinkler heads",
+  "case3_partial_malformed": "Partial pipe network with missing connectivity topology"
+}
