@@ -31,6 +31,7 @@ export const App: React.FC = () => {
   ]);
   const [selectedElement, setSelectedElement] = useState<string | null>("SPK-1");
   const [newComment, setNewComment] = useState<string>("");
+  const [isSeismicActive, setIsSeismicActive] = useState<boolean>(true);
 
   const mountRef = useRef<HTMLDivElement>(null);
 
@@ -202,7 +203,8 @@ export const App: React.FC = () => {
         </button>
       </div>
 
-      {/* R-11b Seismic Scope UI Warning Banner */}
+      {/* R-11b Contextual Seismic Scope Banner */}
+      {isSeismicActive && (
       <div style={{
         position: "absolute",
         top: 16,

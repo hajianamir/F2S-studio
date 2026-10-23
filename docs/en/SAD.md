@@ -87,3 +87,11 @@ The Fire Protection Design & Simulation Platform is an integrated, cloud-native 
 - **NFPA 13 (2022), Section 18.5.5, p. 13-189**: *"Sway Brace Locations and Spacing. Sway braces shall be designed and located to restrain lateral and longitudinal pipe movement within the maximum allowable zone of influence limits."*
 - **NFPA 13 (2022), Section 18.5.11, p. 13-195**: *"Fasteners and Attachment to Structure. Fasteners attaching sway bracing to concrete, structural steel, or timber shall be sized based on allowable prying and shear capacities."*
 - **UI Banner Persistence & Logging**: The Red Engineering Notice Banner in `web/src/App.tsx` is **Non-Dismissable** during active seismic calculation viewing, ensuring PE layout validation notice is permanently visible throughout design review.
+
+
+### 5.9 R-14 Exact Rule Count & Deterministic Baseline Commit Hash
+- **Exact Rule Engine Clause Index**: Exactly **30 digital rule clauses** (15 for NFPA 13 Edition 2022 and 15 for NFPA 72 Edition 2022) as enumerated in `core/rules/coverage_matrix.md`.
+- **Baseline Determinism**: The non-AI rule-engine default layout is 100% deterministic (zero random seeds or time-dependent state). Frozen baseline commit hash: `fe06a73`.
+
+### 5.10 R-11b Contextual Engineering Notice Banner Behavior
+- **Contextual Viewport Rendering**: The Red Engineering Notice Banner renders **ONLY when the Seismic Sway Bracing module is active**. In non-seismic calculation viewports (standard hydraulic view or fire alarm circuit view), the banner is excluded to prevent notification fatigue.
