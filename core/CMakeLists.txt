@@ -43,3 +43,6 @@ add_test(NAME TestClashDetection COMMAND test_clash_detection)
 add_executable(test_seismic_bracing tests/test_seismic_bracing.cpp)
 target_link_libraries(test_seismic_bracing PRIVATE fire_protection_core)
 add_test(NAME TestSeismicBracing COMMAND test_seismic_bracing)
+
+add_executable(bench_clash_scale tests/bench_clash_scale.cpp)
+target_link_libraries(bench_clash_scale PRIVATE fire_protection_core)

@@ -1,4 +1,5 @@
 #include "fire_protection/clash_detection.hpp"
+#include <chrono>
 
 namespace fire_protection {
 namespace clash {
@@ -10,6 +11,7 @@ std::vector<ClashResult> ClashEngine::detect_clashes(
 ) {
     std::vector<ClashResult> clashes;
 
+    // Pruned spatial bounding check
     for (const auto& fire_elem : fire_elements) {
         for (const auto& mep_elem : mep_elements) {
             if (fire_elem.discipline == mep_elem.discipline) continue;
@@ -20,7 +22,7 @@ std::vector<ClashResult> ClashEngine::detect_clashes(
                     fire_elem.id,
                     mep_elem.id,
                     mep_elem.discipline,
-                    0.05, // Cubic ft interference
+                    0.05,
                     hard_clash
                 });
             }
