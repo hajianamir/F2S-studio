@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Concurrent;
+using System.Text.Json.Serialization;
 using CoreInterop;
 using Domain;
 using Infrastructure;
@@ -7,30 +8,28 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 
-var builder = WebApplication.CreateBuilder(args);
+var builder = WebApplication.CreateSlimBuilder(args);
 
-builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
-builder.Services.AddSingleton<Ifc4BimAdapter>();
+builder.Services.ConfigureHttpJsonOptions(options =>
+{
+    options.SerializerOptions.TypeInfoResolverChain.Insert(0, AppJsonSerializerContext.Default);
+});
 
 var app = builder.Build();
 
-app.UseSwagger();
-app.UseSwaggerUI();
-
-var projects = new ConcurrentDictionary<Guid, FireProtectionProject>();
-var calculationJobs = new ConcurrentDictionary<string, object>();
+var calculationJobs = new ConcurrentDictionary<string, CalculationJobResult>();
 
 // Healthcheck
-app.MapGet("/api/health", () => Results.Ok(new { status = "Healthy", timestamp = DateTime.UtcNow }));
+app.MapGet("/api/health", () => Results.Ok(new HealthResponse { Status = "Healthy", Timestamp = DateTime.UtcNow }));
 
 // Hydraulic calculation endpoint via C++ P/Invoke
 app.MapPost("/api/hydraulics/calculate", (FireProtectionProject proj) =>
 {
     string jobId = Guid.NewGuid().ToString();
     string resultJson = NativeMethods.MarshalAndFree(NativeMethods.fp_solve_hydraulic_network_json("{}"));
-    calculationJobs[jobId] = new { jobId, status = "Completed", result = resultJson };
-    return Results.Ok(new { jobId, status = "Queued", pollingUrl = $"/api/jobs/{jobId}" });
+    var jobRes = new CalculationJobResult { JobId = jobId, Status = "Completed", Result = resultJson };
+    calculationJobs[jobId] = jobRes;
+    return Results.Ok(new JobDispatchResponse { JobId = jobId, Status = "Queued", PollingUrl = $"/api/jobs/{jobId}" });
 });
 
 // Job polling endpoint
@@ -40,10 +39,51 @@ app.MapGet("/api/jobs/{jobId}", (string jobId) =>
     {
         return Results.Ok(jobInfo);
     }
-    return Results.NotFound(new { error = "Job not found" });
+    return Results.NotFound();
 });
 
 // Unit conversion endpoint
-app.MapGet("/api/units/gpm-to-lpm", (double gpm) => Results.Ok(new { gpm, lpm = NativeMethods.fp_gpm_to_lpm(gpm) }));
+app.MapGet("/api/units/gpm-to-lpm", (double gpm) =>
+{
+    double lpmVal = NativeMethods.fp_gpm_to_lpm(gpm);
+    return Results.Ok(new UnitConversionResponse { Gpm = gpm, Lpm = lpmVal });
+});
 
 app.Run();
+
+public class HealthResponse
+{
+    public string Status { get; set; } = string.Empty;
+    public DateTime Timestamp { get; set; }
+}
+
+public class UnitConversionResponse
+{
+    public double Gpm { get; set; }
+    public double Lpm { get; set; }
+}
+
+public class JobDispatchResponse
+{
+    public string JobId { get; set; } = string.Empty;
+    public string Status { get; set; } = string.Empty;
+    public string PollingUrl { get; set; } = string.Empty;
+}
+
+public class CalculationJobResult
+{
+    public string JobId { get; set; } = string.Empty;
+    public string Status { get; set; } = string.Empty;
+    public string Result { get; set; } = string.Empty;
+}
+
+[JsonSerializable(typeof(HealthResponse))]
+[JsonSerializable(typeof(UnitConversionResponse))]
+[JsonSerializable(typeof(JobDispatchResponse))]
+[JsonSerializable(typeof(CalculationJobResult))]
+[JsonSerializable(typeof(FireProtectionProject))]
+[JsonSerializable(typeof(NetworkNode))]
+[JsonSerializable(typeof(NetworkPipe))]
+internal partial class AppJsonSerializerContext : JsonSerializerContext
+{
+}
