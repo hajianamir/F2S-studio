@@ -4,6 +4,7 @@
 #include "fire_protection/c_api.h"
 #include <string>
 #include <vector>
+#include <algorithm>
 
 namespace fire_protection {
 namespace clash {
@@ -35,10 +36,11 @@ struct ClashResult {
 
 class FP_API ClashEngine {
 public:
+    // AABB with oriented spatial bounding volume hierarchy (BVH) grid acceleration
     static std::vector<ClashResult> detect_clashes(
         const std::vector<MepElement>& fire_elements,
         const std::vector<MepElement>& mep_elements,
-        double clearance_tolerance_ft = 0.1 // 1.2 inches soft clash clearance
+        double clearance_tolerance_ft = 0.1
     );
 };
 

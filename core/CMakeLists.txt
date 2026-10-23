@@ -14,6 +14,7 @@ add_library(fire_protection_core SHARED
     src/fire_alarm.cpp
     src/c_api.cpp
     src/clash_detection.cpp
+    src/seismic_bracing.cpp
 )
 
 enable_testing()
@@ -38,3 +39,7 @@ endif()
 add_executable(test_clash_detection tests/test_clash_detection.cpp)
 target_link_libraries(test_clash_detection PRIVATE fire_protection_core)
 add_test(NAME TestClashDetection COMMAND test_clash_detection)
+
+add_executable(test_seismic_bracing tests/test_seismic_bracing.cpp)
+target_link_libraries(test_seismic_bracing PRIVATE fire_protection_core)
+add_test(NAME TestSeismicBracing COMMAND test_seismic_bracing)

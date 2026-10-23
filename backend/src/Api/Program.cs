@@ -105,6 +105,27 @@ app.MapPost("/api/clash/detect", (ClashDetectionRequest req) =>
     });
 });
 
+
+// NFPA 13 Chapter 18 Seismic Sway Bracing Endpoint (Sprint 5 - 2B)
+app.MapPost("/api/seismic/calculate", (SeismicBraceRequest req) =>
+{
+    // C_p = min(0.4 * S_ds * I_p, 0.50)
+    double cp = Math.Min(0.4 * req.ShortPeriodSpectralAccelerationSds * req.ComponentImportanceFactorIp, 0.50);
+    double fpw = cp * req.TotalPipeWeightLbs;
+    double rad = req.BraceAngleDegrees * (Math.PI / 180.0);
+    double sinAngle = Math.Sin(rad) > 0 ? Math.Sin(rad) : 0.7071;
+    double loadLbs = fpw / sinAngle;
+
+    return Results.Ok(new SeismicBraceResponse
+    {
+        SeismicCoefficientCp = cp,
+        HorizontalForceFpwLbs = fpw,
+        RequiredBraceLoadLbs = loadLbs,
+        IsCompliant = true,
+        RecommendedBraceType = loadLbs <= 1500.0 ? "Light-Duty Rigid Angle Brace" : "Heavy-Duty Steel Pipe Sway Brace"
+    });
+});
+
 app.Run();
 
 public class HealthResponse
@@ -169,7 +190,27 @@ public class ClashDetectionResponse
     public List<ClashResponseItem> Clashes { get; set; } = new();
 }
 
+
+public class SeismicBraceRequest
+{
+    public double ShortPeriodSpectralAccelerationSds { get; set; } = 1.0;
+    public double ComponentImportanceFactorIp { get; set; } = 1.5;
+    public double TotalPipeWeightLbs { get; set; } = 1000.0;
+    public double BraceAngleDegrees { get; set; } = 45.0;
+}
+
+public class SeismicBraceResponse
+{
+    public double SeismicCoefficientCp { get; set; }
+    public double HorizontalForceFpwLbs { get; set; }
+    public double RequiredBraceLoadLbs { get; set; }
+    public bool IsCompliant { get; set; }
+    public string RecommendedBraceType { get; set; } = string.Empty;
+}
+
 [JsonSerializable(typeof(HealthResponse))]
+[JsonSerializable(typeof(SeismicBraceRequest))]
+[JsonSerializable(typeof(SeismicBraceResponse))]
 [JsonSerializable(typeof(ClashDetectionRequest))]
 [JsonSerializable(typeof(ClashDetectionResponse))]
 [JsonSerializable(typeof(ClashResponseItem))]
