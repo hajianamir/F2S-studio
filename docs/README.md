@@ -17,6 +17,7 @@
   - [Phase 3 Week 3 Checkpoint & Position Papers](en/PHASE3_WEEK3_CHECKPOINT.md)
   - [Phase 3 Security & Regulatory Position Papers](en/PHASE3_SECURITY_REGULATORY.md)
   - [Phase 3 Week 4 Checkpoint Report](en/PHASE3_WEEK4_CHECKPOINT.md)
+  - [Phase 3 Week 5 Checkpoint Report](en/PHASE3_WEEK5_CHECKPOINT.md)
 
 - **فهرست مستندات فارسی (`docs/fa/`)**:
   - [سند معماری نرم‌افزار (SAD_FA)](fa/SAD_FA.md)
@@ -31,6 +32,7 @@
   - [گزارش رفع ریسک‌های فاز ۳](fa/PHASE3_WEEK1_CLOSURE_FA.md)
   - [گزارش چک‌پوینت فاز ۳ هفته ۳](fa/PHASE3_WEEK3_CHECKPOINT_FA.md)
   - [گزارش چک‌پوینت فاز ۳ هفته ۴](fa/PHASE3_WEEK4_CHECKPOINT_FA.md)
+  - [گزارش چک‌پوینت فاز ۳ هفته ۵](fa/PHASE3_WEEK5_CHECKPOINT_FA.md)
 
 ---
 

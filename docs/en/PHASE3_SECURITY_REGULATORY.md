@@ -57,3 +57,20 @@ Every AI layout interaction records an immutable audit log entry containing:
 
 ### 4.2 Sprint 3.5: Designer-in-the-Loop Usability Testing (R-16)
 - Usability testing with 5 active PE fire protection designers evaluating UI workflow speed, BCF pinning, and 3D viewport responsiveness.
+
+
+## 5. R-12 & R-13 Final Clarifications & Operational Protocols
+
+### 5.1 R-12 Internal-vs-AHJ View Rendering & Rejected Suggestion Audit
+- **Internal Review Viewport**: Displays full AI suggestion geometry, alternative pipe routing candidates, rejected proposals, and PE modification logs.
+- **AHJ Submittal Package**: Renders **ONLY the final PE-stamped layout**, accompanied by an appendix statement certifying PE sign-off.
+- **Rejected Suggestion Audit**: Rejected AI proposals are explicitly recorded in the audit trail (`action: "REJECTED"`, `reason: "Structural beam interference"`).
+
+### 5.2 R-13 Telemetry Access Audit, Retention Policy & Incident Notification
+- **Access Audit Logging**: Every query against sensor telemetry stores a logged audit record containing `user_id`, `timestamp`, `queried_sensor_id`, and `purpose_code`.
+- **Data Retention Policy**: Raw time-series readings retained for 90 days in primary hot storage, archived to encrypted AES-256 cold storage for 3 years, and purged automatically per GDPR data minimization rules.
+- **Incident Response Runbook**: Any detected ingestion breach or mTLS certificate failure triggers instant email/SMS notifications to the **Project Owner**, **Engineer of Record (PE)**, and **Client Security Officer**.
+
+### 5.3 R-14 AI Baseline Definition & Compliance Scope Reframe
+- **Baseline Definition**: The optimization baseline is defined as **the platform's current non-AI rule-engine default layout** for the 100k sq ft Light Hazard reference model.
+- **Reframed Compliance Claim**: *"Minimum 8.0% pipe run footage reduction achieved compared to the platform's non-AI default layout, subject to 100% compliance with the 30+ implemented NFPA 13 (2022) digital rule engine clauses."*

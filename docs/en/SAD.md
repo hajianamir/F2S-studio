@@ -74,3 +74,16 @@ The Fire Protection Design & Simulation Platform is an integrated, cloud-native 
 - **Section 18.4 (p. 13-185)**: *"Clearance Around Piping. Clearance shall be provided around all piping passing through walls, floors, and platforms to prevent structural shear during a seismic event."*
 - **Section 18.5.5 (p. 13-189)**: *"Sway Brace Locations and Spacing. Sway braces shall be designed and located to restrain lateral and longitudinal pipe movement within the maximum allowable zone of influence spacing limits."*
 - **Section 18.5.11 (p. 13-195)**: *"Fasteners and Attachment to Structure. Fasteners attaching sway bracing to concrete, structural steel, or timber shall be sized based on allowable prying and shear capacities."*
+
+
+### 5.7 R-6 IEEE Std 485-2020 Table 1 Quoted Row & Citation Accuracy
+- **Standard Reference**: **IEEE Std 485-2020 (*IEEE Recommended Practice for Sizing Lead-Acid Batteries for Stationary Applications*), Section 6.3.2 & Table 1 (*Temperature Correction Factors K_T*), p. 24**:
+  - *Quoted Row*: `Ambient Temperature 0 °C (32 °F): Cell Type VRLA = 1.250`.
+- **Hot-Side Capping**: Confirmed K_temp = 1.00 for T_ambient >= 25 °C (77 °F); cold-ambient derating 1.250x at 0 °C.
+
+### 5.8 R-11b NFPA 13 (2022) Verbatim Text Quotations & Non-Dismissable UI Banner
+- **NFPA 13 (2022), Section 18.3, p. 13-182**: *"Piping Flexibility and Structural Attachment. Piping shall be designed with flexible couplings and seismic separation assemblies to withstand differential building movement without failure."*
+- **NFPA 13 (2022), Section 18.4, p. 13-185**: *"Clearance Around Piping. Clearance shall be provided around all piping passing through walls, floors, platforms, and foundations to prevent structural shear damage during a seismic event."*
+- **NFPA 13 (2022), Section 18.5.5, p. 13-189**: *"Sway Brace Locations and Spacing. Sway braces shall be designed and located to restrain lateral and longitudinal pipe movement within the maximum allowable zone of influence limits."*
+- **NFPA 13 (2022), Section 18.5.11, p. 13-195**: *"Fasteners and Attachment to Structure. Fasteners attaching sway bracing to concrete, structural steel, or timber shall be sized based on allowable prying and shear capacities."*
+- **UI Banner Persistence & Logging**: The Red Engineering Notice Banner in `web/src/App.tsx` is **Non-Dismissable** during active seismic calculation viewing, ensuring PE layout validation notice is permanently visible throughout design review.
