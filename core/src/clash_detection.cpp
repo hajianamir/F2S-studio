@@ -1,5 +1,4 @@
 #include "fire_protection/clash_detection.hpp"
-#include <chrono>
 
 namespace fire_protection {
 namespace clash {

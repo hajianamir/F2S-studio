@@ -95,3 +95,17 @@ The Fire Protection Design & Simulation Platform is an integrated, cloud-native 
 
 ### 5.10 R-11b Contextual Engineering Notice Banner Behavior
 - **Contextual Viewport Rendering**: The Red Engineering Notice Banner renders **ONLY when the Seismic Sway Bracing module is active**. In non-seismic calculation viewports (standard hydraulic view or fire alarm circuit view), the banner is excluded to prevent notification fatigue.
+
+
+### 5.11 R-17 Clash Benchmark Discrepancy Reconciliation (Week 6 vs Week 7)
+- **Root Cause Reconciliation**: The Week 6 reported timing ($26.50\text{ ms}$) represented **a single spatial hash voxel bucket index build and single-element lookup query**. The Week 7 reported timing ($2,450\text{ ms}$) represented a **full pairwise $O(N^2)$ cross-discipline clash detection matrix traversal** across all 100,000 bounding boxes ($50,000 \times 50,000$ candidate comparisons) using `-O3` native C++ compilation.
+- **Production Standard**: All future clash benchmark reports mandate the full pairwise cross-discipline matrix traversal metric ($2,450\text{ ms}$ baseline).
+
+### 5.12 R-14 PE Review Protocol for Uncovered Code Deviations
+- **Reviewer Qualification**: Licensed Professional Engineer (PE) credentialed in Fire Protection Engineering.
+- **Checklist Scope**: Full review of generated layout against the 2022 edition of NFPA 13 chapters not currently digitalized in the 15-rule engine (e.g. Chapter 18 bracing spacing, Chapter 16 storage density curves, Chapter 8 obstruction rules).
+- **Deviation Definition**: Any design element that requires manual engineering modification to comply with full NFPA 13 requirements prior to AHJ submittal.
+- **Reporting Format**: Itemized deviation table listing element ID, governing NFPA section reference, observed issue, and required PE remediation.
+
+### 5.13 R-18 Non-Dismissable Banner Contextual Scope
+- **Render Verification**: Verified in `web/src/App.tsx`. Banner is bound to `isSeismicActive = true` condition (Seismic Viewport). In standard hydraulic or circuit viewports (`isSeismicActive = false`), banner is completely suppressed. Banner has no `onClick` dismissal handler or close button.

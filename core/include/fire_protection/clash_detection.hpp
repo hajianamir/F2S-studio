@@ -5,6 +5,7 @@
 #include <string>
 #include <vector>
 #include <algorithm>
+#include <memory>
 
 namespace fire_protection {
 namespace clash {
@@ -34,9 +35,16 @@ struct ClashResult {
     bool is_hard_clash;
 };
 
+struct BvhNode {
+    BoundingBox box;
+    int left_child{-1};
+    int right_child{-1};
+    int element_index{-1};
+    bool is_leaf() const { return left_child == -1 && right_child == -1; }
+};
+
 class FP_API ClashEngine {
 public:
-    // AABB with oriented spatial bounding volume hierarchy (BVH) grid acceleration
     static std::vector<ClashResult> detect_clashes(
         const std::vector<MepElement>& fire_elements,
         const std::vector<MepElement>& mep_elements,
