@@ -16,7 +16,7 @@ jobs:
       - name: Set up C++ Build Environment & Coverage Tools
         run: |
           sudo apt-get update
-          sudo apt-get install -y cmake g++ lcov
+          sudo apt-get install -y cmake g++ lcov bc
 
       - name: Build C++ Core with Coverage
         run: |
@@ -29,6 +29,16 @@ jobs:
         run: |
           cd core/build
           ctest --output-on-failure
+
+      - name: Enforce >80% Core Line Coverage
+        run: |
+          cd core/build
+          lcov --capture --directory . --output-file coverage.info
+          lcov --remove coverage.info "/usr/*" "*/tests/*" --output-file coverage.filtered.info
+          lcov --list coverage.filtered.info
+          COVERAGE=$(lcov --summary coverage.filtered.info | grep lines | awk '{print $2}' | tr -d '%')
+          echo "Measured Core Line Coverage: ${COVERAGE}%"
+          python3 -c "import sys; sys.exit(0 if float('${COVERAGE}') >= 80.0 else 1)"
 
       - name: Setup .NET 8 SDK
         uses: actions/setup-dotnet@v4
