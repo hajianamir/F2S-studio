@@ -260,3 +260,9 @@ The Fire Protection Design & Simulation Platform is an integrated, cloud-native 
   2. *Digital PE Stamp & Audit Trail*: Validate R-12 PE stamp signature block and audit log format.
   3. *Local Amendments Verification*: Confirm California Fire Code (CFC) Title 24 local amendment application on LA County commercial office project.
 - **R-36 SUS Reporting & Screening Refinement**: External PEs ($N=8$) reported separately from beta firm PEs ($N=2$); screening criteria includes prior LA County submittal experience.
+
+
+### 5.34 R-38 PDF Data Layer Scope & R-37 Roadmap-Level Commitment Clarifications
+- **R-38 PDF Render & Data Layer Validation Scope**: Sprint 4.1 report quality verification explicitly validates the underlying **structured JSON data layer** (`lacounty_submittal_report_sample.json`). Field completeness is verified internally at 100%; PDF visual rendering layout export testing is scheduled for Week 8 in parallel with pre-submittal package preparation. External AHJ validation is scheduled for the Week 8 LA County Fire Department consultation.
+- **R-37 Phase 5 Commitment Status (Path B Selected)**: Phase 5 (FDNY/Chicago 2019 Edition & Storage Chapters 12–20 ruleset expansion) is **committed at the roadmap level** (scope defined, target kickoff Q2 2027). Formal budget allocation and team staffing decisions are deferred to the Q1 2027 strategic planning cycle.
+- **R-33 Pre-Submittal Consultation Status**: The Week 8 pre-submittal consultation with the LA County Fire Department Plan Examination Bureau is **formally scheduled** with the Firm A PE of record and LA County plan review officers.
