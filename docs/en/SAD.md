@@ -244,3 +244,10 @@ The Fire Protection Design & Simulation Platform is an integrated, cloud-native 
 - **R-32 5-PE Panel Recruitment Plan**: 2 PEs from Beta Firms A & B; 3 external Fire Protection PEs recruited via UserInterviews/Respondent.io research panel.
 - **R-33 Pilot Timeline**: Firm A primary pilot submittal targeted for Q1 2027 (Week 12 of Phase 4).
 - **R-34 Commercial Scope Positioning**: Clear GA positioning identifying LA County 2022 approval vs Phase 5 FDNY/Chicago 2019 expansion.
+
+
+### 5.32 R-31 Storage Occupancy, R-33 State A Pre-Submittal, & R-36 Path B N=10 Panel
+- **R-31 Firm B Storage Classification**: Firm B's industrial warehouse includes high-piled pallet racking > 12 ft, classifying it as **Storage Occupancy (S-1/S-2 per NFPA 13 Chapters 12–20)**. Re-scoped as a Phase 5 stretch test outside Phase 4 Light Hazard scope.
+- **R-33 State A Internal QA & Pre-Submittal Consultation**: State A confirmed (Firm A internal QA of export package). Pre-submittal consultation with LA County Fire Department scheduled for Week 8 to de-risk Q1 2027 formal submittal.
+- **R-36 Path B SUS Sourcing ($N=10$)**: Expanded usability panel to $N=10$ PEs (2 beta firm PEs + 8 external PEs via Respondent.io panel) to eliminate sample bias and narrow 95% CI margin.
+- **R-34 Conditional GA Positioning**: "Designed for LA County submittal; approval pending Q1 2027 pilot." FDNY/Chicago templates categorized as "planned for Phase 5".

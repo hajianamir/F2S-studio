@@ -1,24 +1,25 @@
-# Phase 4 Roadmap, Exit Criteria & Customer Validation Strategy (v5)
+# Phase 4 Roadmap, Exit Criteria & Customer Validation Strategy (v6)
 **Fire Protection Design & Simulation Platform**
 
 ---
 
 ## 1. Phase 4 Phase-Level Exit Definition & Pilot Designation
 - **Primary Exit Pilot Designation (Firm A)**:
-  - **Firm A (California Regional Engineering)**: 100k sq ft Light Hazard (LH) commercial office building in LA County. **Designated as Sole Phase 4 Exit Gate Primary Pilot Project**. Target submittal date: **Q1 2027 (Week 12 of Phase 4)**. Current status: Design complete, permit submittal package pending platform export validation.
-- **Secondary Stretch Pilot (Firm B)**:
-  - **Firm B (West Coast MEP Consultants)**: Industrial Warehouse (Ordinary Hazard Group 2 / OH-2). Designated as **Secondary Stretch Pilot** to evaluate OH-2 density rules (`NFPA13-2022-16.2.3`). Does not block Phase 4 exit gate if OH-2 rules require Phase 5 expansion.
+  - **Firm A (California Regional Engineering)**: 100k sq ft Light Hazard (LH) commercial office building in LA County. **Designated as Sole Phase 4 Exit Gate Primary Pilot Project**. Target submittal date: **Q1 2027 (Week 12 of Phase 4)**.
+  - **R-33 Pilot Timeline & State Disclosure**: State A confirmed (Firm A internal QA of export package). To de-risk the Q1 2027 formal submittal, a **Pre-Submittal Consultation with LA County Fire Department** is scheduled for **Week 8 of Phase 4**.
+- **Secondary Stretch Pilot (Firm B - R-31 Storage Occupancy Clarification)**:
+  - **Firm B (West Coast MEP Consultants)**: Industrial Warehouse with Pallet Racking > 12 ft. Confirmed **Storage Occupancy (S-1/S-2)** per NFPA 13 Chapters 12–20 (requires storage density & rack sprinkler design rules). Classified as a **Secondary Phase 5 Stretch Test**; does not affect or block Phase 4 Light Hazard exit criteria.
 - **Phase Exit Criteria**:
   1. **Primary Pilot AHJ Submittal**: Active pilot submittal to LA County Fire Department for Firm A's commercial office project resulting in **(a) AHJ approval**, or **(b) AHJ feedback with actionable, tractable corrections** resolvable in <= 2 weeks.
-  2. **Designer Usability Score**: **SUS score >= 75** across $N = 5$ practicing PE design engineers.
+  2. **Designer Usability Score (Path B R-36 Selected)**: **SUS score >= 75** across **$N = 10$ practicing PE design engineers** (2 beta firm PEs + 8 external PEs recruited via Respondent.io / UserInterviews panel).
   3. **Verified Viewport Performance**: 1,000,000 element 3D WebGPU viewport rendering at **>= 30 fps**.
 
 ---
 
-## 2. R-32 PE Recruitment Plan for Sprint 4.2 Usability Testing ($N = 5$)
-- **PE Panel Composition**:
+## 2. R-36 PE Panel Sourcing Plan ($N = 10$ Path B)
+- **Panel Sourcing Matrix ($N=10$)**:
   - **PE 1 & PE 2**: Senior PEs from signed Beta Firms A & B.
-  - **PE 3, PE 4, PE 5**: 3 external licensed Fire Protection PEs recruited via **UserInterviews / Respondent.io** research panel (screened for >= 5 years Revit/AutoCAD experience, $250 honorarium per 60-min session). Recruitment target completion: **Week 5 of Phase 4**.
+  - **PE 3 through PE 10**: 8 external licensed Fire Protection PEs recruited via **UserInterviews / Respondent.io** research panel (screened for >= 5 years Revit experience, $250 honorarium per 60-min session). Total panel honorarium budget: $2,000.
 
 ---
 
@@ -35,5 +36,6 @@
 
 ---
 
-## 5. R-34 Phase 5 Commercial Positioning Statement
-- **Commercial Positioning at GA**: *"LA County Fire Department Approved (NFPA 13 2022 Edition). FDNY and Chicago Fire Bureau (2019 Edition) submittal templates scheduled for Phase 5 ruleset expansion."*
+## 5. R-34 GA Commercial Scope Positioning Statement
+- **Commercial Scope Positioning Prior to Pilot Approval**: *"Designed for LA County Fire Department submittal (NFPA 13 2022 Edition); pilot approval pending Q1 2027. FDNY and Chicago Fire Bureau (2019 Edition) submittal templates planned for Phase 5 ruleset expansion."*
+- **Post-Pilot Approval Positioning**: *"LA County Fire Department Approved (NFPA 13 2022 Edition)."*
