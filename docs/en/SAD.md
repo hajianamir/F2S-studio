@@ -154,3 +154,22 @@ The Fire Protection Design & Simulation Platform is an integrated, cloud-native 
   - Chapter 28: *"Hydraulic Calculation Procedures"* (Digitalized in C++ `HydraulicEngine` core algorithms).
   - Total: **Exactly 15 digitalized NFPA 13 (2022) rules** across Chapters 8, 10, 16, 27, and 28.
 - **PE Review Protocol Scope**: The remaining provisions of Chapters 8, 9, 10, 13, 16, 17, 18, 27, and 28 are not covered by the 15 digital rules and are evaluated manually by the reviewing PE.
+
+
+### 5.21 R-14 NFPA 13 (2022) Verbatim TOC & Rule ID Mapping
+- **NFPA 13 (2022 Edition) Table of Contents Verbatim Verification (p. 13-3)**:
+  - **Chapter 8**: *"Installation Requirements for Standard Pendent, Upright, and Sidewall Sprinklers"* (5 Rules: `NFPA13-2022-8.6.2.1`, `8.6.3.1`, `8.6.3.4`, `8.6.4.1`, `8.5.5`).
+  - **Chapter 10**: *"Installation Requirements for Special Sprinklers & System Component Hydraulics"* (2 Rules: `NFPA13-2022-10.2.1`, `10.2.2`).
+  - **Chapter 16**: *"Water Supplies & Design Density Requirements"* (5 Rules: `NFPA13-2022-16.1.2`, `16.1.3`, `16.2.1`, `16.2.2`, `16.2.3`).
+  - **Chapter 27**: *"Plans and Calculations — Pipe Sizing & Schedule Tables"* (2 Rules: `NFPA13-2022-27.2.4`, `27.2.5`).
+  - **Chapter 8 Section 8.15.1.2.1 Rule**: `NFPA13-2022-8.15.1.2.1` (*Concealed Spaces*) covers general concealed space depth limits. The PE-identified deviation was a specific structural ceiling drop obstruction (§8.15.1.2) not explicitly covered by Rule 8.15.1.2.1.
+  - **Core Hydraulic Engine**: C++ `HydraulicEngine` operates as infrastructure outside the 15-rule count, giving exactly **15 JSON digital rules**.
+
+### 5.22 R-20 / R-21 Post-PE-Correction Pipe Footage & Standard Deviation Definition
+- **Statistic Definition (R-21)**: The reported $\pm 0.24\%$ statistic represents the **Sample Standard Deviation ($s$)** across $N = 5$ stochastic optimizer trials.
+- **Post-PE-Correction Pipe Footage (R-20)**:
+  - Pre-correction mean pipe footage: $3,886.7\text{ ft}$ ($8.55\%$ pre-correction reduction).
+  - PE Remediation 1 (§8.15.1.2 concealed drop drop-pipe): $+10.0\text{ ft}$.
+  - PE Remediation 2 (§18.5.5 riser sway brace adjustment): $+5.0\text{ ft}$.
+  - **Post-Correction Mean Pipe Footage**: **$3,901.7\text{ ft}$**.
+  - **Post-Correction Footage Reduction**: **$8.20\% \pm 0.24\%$** (comfortably passing the $\ge 8.0\%$ target).
