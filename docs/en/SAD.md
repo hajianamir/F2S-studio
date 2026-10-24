@@ -222,3 +222,13 @@ The Fire Protection Design & Simulation Platform is an integrated, cloud-native 
 ### 5.28 Phase 4 Phase-Level Exit Definition & Pre-Measurement Policy
 - **Phase Exit Gate**: Requires 1 active pilot project submittal to a municipal AHJ (FDNY / LA County Fire / Chicago Fire Bureau) using the platform-generated report package, a SUS usability score $\ge 75$ across 5 PEs, and WebGPU 1M rendering at $\ge 30$ fps.
 - **AI Target Policy**: The $8.0\%$ footage reduction target remains fixed; if loss function reinforcement drops reduction below $8.0\%$, optimizer heuristics will be improved rather than lowering the threshold.
+
+
+### 5.29 Sprint 4.1 Jurisdiction Edition Matrix & 4.4 t-Distribution Formula
+- **Jurisdiction Edition Matrix**:
+  - **FDNY**: NFPA 13 (2019) + NYC Appendix Q.
+  - **Chicago Fire Bureau**: NFPA 13 (2019) + Chicago Title 15.
+  - **LA County Fire Department**: NFPA 13 (2022) + California Title 24.
+- **t-Distribution Formula ($N=20$, $df=19$, $t_{0.025}=2.093$)**:
+  $$\text{95\% CI} = [\mu - 2.093 \cdot \text{SE}, \mu + 2.093 \cdot \text{SE}]$$
+- **R-28 Beta Engagement**: 2 regional AEC fire protection engineering firms signed for Sprint 4.1 report submittal validation and Sprint 4.2 usability testing.
