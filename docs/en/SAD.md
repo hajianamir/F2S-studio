@@ -204,3 +204,12 @@ The Fire Protection Design & Simulation Platform is an integrated, cloud-native 
   - Sample standard deviation ($s$): **$0.24\%$**.
   - $95\%$ Confidence Interval on Mean: **$[7.90\%, 8.50\%]$**.
   - **Framing Conclusion**: Point estimate ($8.20\%$) passes the $\ge 8.0\%$ target with 4 out of 5 runs exceeding 8.0%; statistical sample size ($N=5$) yields $95\%$ CI lower bound at $7.90\%$.
+
+
+### 5.25 R-23 TOC Verification Limitation & R-24 Chapter 8 Rule Gap Statement
+- **R-23 TOC Verification Limitation**: Chapter titles in Section 5.23 are reconstructed from engineering documentation; they have not been independently cross-verified against a physical printed copy of NFPA 13 (2022 Edition) p. 13-3 in the sandboxed environment.
+- **R-24 Chapter 8 Rule Gap Statement**: Chapter 8 has 5 implemented rules (`NFPA13-2022-8.6.2.1`, `8.6.3.1`, `8.6.3.4`, `8.6.4.1`, `8.5.5`); Section 8.15.1.2 concealed drop structural obstruction rules are not among them, hence requiring manual PE review.
+
+### 5.26 R-20 Operative Acceptance Criterion & N=20 Deferred Statement
+- **Operative Acceptance Criterion**: The applied optimization acceptance criterion is defined as **mean footage reduction >= 8.0% across N=5 trials**, with individual trial variance accepted and 95% CI reported for transparency.
+- **N=20 Trial Deferral**: Statistical confirmation at 95% confidence with larger sample size (N >= 20 trials) is formally deferred to Phase 4.
