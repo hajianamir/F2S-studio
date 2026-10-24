@@ -237,3 +237,10 @@ The Fire Protection Design & Simulation Platform is an integrated, cloud-native 
 ### 5.30 R-29 LA County Primary Pilot Decision & R-30 Citation Limitation
 - **R-29 Primary Pilot Decision (Path B)**: To prevent edition mismatch structural rejections, Sprint 4.1 and Phase 4 primary pilot AHJ submittals target **LA County Fire Department** (accepts **NFPA 13 2022 Edition** + CFC Title 24), matching the platform's 100% digitalized `NFPA13-2022-*` rule engine. FDNY and Chicago 2019 templates are deferred to Phase 5.
 - **R-30 Jurisdiction Citation Limitation Statement**: Jurisdiction local amendment section citations are reconstructed from engineering documentation; they have not been independently verified against physical printed local municipal code books in the sandboxed environment.
+
+
+### 5.31 R-31 Pilot Risk Mitigation, R-32 PE Recruitment & R-33 Timeline
+- **R-31 Firm A Primary / Firm B Stretch Designation**: Firm A (100k sq ft Light Hazard commercial office) is designated as the sole Phase 4 primary exit pilot project. Firm B (OH-2 industrial warehouse) is classified as a secondary stretch test.
+- **R-32 5-PE Panel Recruitment Plan**: 2 PEs from Beta Firms A & B; 3 external Fire Protection PEs recruited via UserInterviews/Respondent.io research panel.
+- **R-33 Pilot Timeline**: Firm A primary pilot submittal targeted for Q1 2027 (Week 12 of Phase 4).
+- **R-34 Commercial Scope Positioning**: Clear GA positioning identifying LA County 2022 approval vs Phase 5 FDNY/Chicago 2019 expansion.
