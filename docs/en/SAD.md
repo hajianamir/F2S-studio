@@ -232,3 +232,8 @@ The Fire Protection Design & Simulation Platform is an integrated, cloud-native 
 - **t-Distribution Formula ($N=20$, $df=19$, $t_{0.025}=2.093$)**:
   $$\text{95\% CI} = [\mu - 2.093 \cdot \text{SE}, \mu + 2.093 \cdot \text{SE}]$$
 - **R-28 Beta Engagement**: 2 regional AEC fire protection engineering firms signed for Sprint 4.1 report submittal validation and Sprint 4.2 usability testing.
+
+
+### 5.30 R-29 LA County Primary Pilot Decision & R-30 Citation Limitation
+- **R-29 Primary Pilot Decision (Path B)**: To prevent edition mismatch structural rejections, Sprint 4.1 and Phase 4 primary pilot AHJ submittals target **LA County Fire Department** (accepts **NFPA 13 2022 Edition** + CFC Title 24), matching the platform's 100% digitalized `NFPA13-2022-*` rule engine. FDNY and Chicago 2019 templates are deferred to Phase 5.
+- **R-30 Jurisdiction Citation Limitation Statement**: Jurisdiction local amendment section citations are reconstructed from engineering documentation; they have not been independently verified against physical printed local municipal code books in the sandboxed environment.
