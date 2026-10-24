@@ -22,12 +22,6 @@
   - [Phase 3 Week 6 Checkpoint Report](en/PHASE3_WEEK6_CHECKPOINT.md)
   - [Phase 3 Week 7 Checkpoint Report](en/PHASE3_WEEK7_CHECKPOINT.md)
   - [Phase 3 Week 8 Checkpoint Report](en/PHASE3_WEEK8_CHECKPOINT.md)
-  - [Phase 3 Week 9 Checkpoint Report](en/PHASE3_WEEK9_CHECKPOINT.md)
-  - [Phase 3 Week 10 Checkpoint Report](en/PHASE3_WEEK10_CHECKPOINT.md)
-  - [Phase 3 Week 11 Checkpoint Report](en/PHASE3_WEEK11_CHECKPOINT.md)
-  - [Phase 3 Week 12 Checkpoint Report](en/PHASE3_WEEK12_CHECKPOINT.md)
-  - [Phase 3 Week 13 Checkpoint Report](en/PHASE3_WEEK13_CHECKPOINT.md)
-  - [Phase 3 Week 14 Checkpoint Report](en/PHASE3_WEEK14_CHECKPOINT.md)
   - [Phase 4 Week 1 Checkpoint Report](en/PHASE4_WEEK1_CHECKPOINT.md)
   - [Phase 4 Week 2 Checkpoint Report](en/PHASE4_WEEK2_CHECKPOINT.md)
   - [Phase 4 Week 3 Checkpoint Report](en/PHASE4_WEEK3_CHECKPOINT.md)
@@ -35,6 +29,7 @@
   - [Phase 4 Week 5 Checkpoint Report](en/PHASE4_WEEK5_CHECKPOINT.md)
   - [Phase 4 Week 6 Checkpoint Report](en/PHASE4_WEEK6_CHECKPOINT.md)
   - [Phase 4 Week 7 Checkpoint Report](en/PHASE4_WEEK7_CHECKPOINT.md)
+  - [Phase 4 Week 8 Checkpoint Report](en/PHASE4_WEEK8_CHECKPOINT.md)
 
 - **فهرست مستندات فارسی (`docs/fa/`)**:
   - [سند معماری نرم‌افزار (SAD_FA)](fa/SAD_FA.md)
@@ -66,6 +61,7 @@
   - [گزارش چک‌پوینت فاز ۴ هفته ۵](fa/PHASE4_WEEK5_CHECKPOINT_FA.md)
   - [گزارش چک‌پوینت فاز ۴ هفته ۶](fa/PHASE4_WEEK6_CHECKPOINT_FA.md)
   - [گزارش چک‌پوینت فاز ۴ هفته ۷](fa/PHASE4_WEEK7_CHECKPOINT_FA.md)
+  - [گزارش چک‌پوینت فاز ۴ هفته ۸](fa/PHASE4_WEEK8_CHECKPOINT_FA.md)
 
 ---
 

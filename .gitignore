@@ -26,3 +26,6 @@ __pycache__/
 # IDEs
 .vscode/
 .idea/
+build/
+web/node_modules/
+web/dist/
