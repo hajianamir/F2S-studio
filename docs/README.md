@@ -33,6 +33,7 @@
   - [Phase 4 Week 3 Checkpoint Report](en/PHASE4_WEEK3_CHECKPOINT.md)
   - [Phase 4 Week 4 Checkpoint Report](en/PHASE4_WEEK4_CHECKPOINT.md)
   - [Phase 4 Week 5 Checkpoint Report](en/PHASE4_WEEK5_CHECKPOINT.md)
+  - [Phase 4 Week 6 Checkpoint Report](en/PHASE4_WEEK6_CHECKPOINT.md)
 
 - **فهرست مستندات فارسی (`docs/fa/`)**:
   - [سند معماری نرم‌افزار (SAD_FA)](fa/SAD_FA.md)
@@ -62,6 +63,7 @@
   - [گزارش چک‌پوینت فاز ۴ هفته ۳](fa/PHASE4_WEEK3_CHECKPOINT_FA.md)
   - [گزارش چک‌پوینت فاز ۴ هفته ۴](fa/PHASE4_WEEK4_CHECKPOINT_FA.md)
   - [گزارش چک‌پوینت فاز ۴ هفته ۵](fa/PHASE4_WEEK5_CHECKPOINT_FA.md)
+  - [گزارش چک‌پوینت فاز ۴ هفته ۶](fa/PHASE4_WEEK6_CHECKPOINT_FA.md)
 
 ---
 
@@ -72,3 +74,4 @@
 - **Rule Engine Standards Coverage Matrix**: [`core/rules/coverage_matrix.md`](../core/rules/coverage_matrix.md)
 - **R-18 Visual Render Verification Document**: [`docs/artifacts/R18_RENDER_VERIFICATION.md`](docs/artifacts/R18_RENDER_VERIFICATION.md)
 - **Frozen Baseline Layout Artifact**: [`benchmark/baseline_layout_fe06a73.json`](../benchmark/baseline_layout_fe06a73.json)
+- **Sample LA County Submittal Report Artifact**: [`benchmark/reports/lacounty_submittal_report_sample.json`](../benchmark/reports/lacounty_submittal_report_sample.json)

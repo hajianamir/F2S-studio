@@ -251,3 +251,12 @@ The Fire Protection Design & Simulation Platform is an integrated, cloud-native 
 - **R-33 State A Internal QA & Pre-Submittal Consultation**: State A confirmed (Firm A internal QA of export package). Pre-submittal consultation with LA County Fire Department scheduled for Week 8 to de-risk Q1 2027 formal submittal.
 - **R-36 Path B SUS Sourcing ($N=10$)**: Expanded usability panel to $N=10$ PEs (2 beta firm PEs + 8 external PEs via Respondent.io panel) to eliminate sample bias and narrow 95% CI margin.
 - **R-34 Conditional GA Positioning**: "Designed for LA County submittal; approval pending Q1 2027 pilot." FDNY/Chicago templates categorized as "planned for Phase 5".
+
+
+### 5.33 R-37 Phase 5 Commitment & Week 8 LA County Pre-Submittal Consultation Agenda
+- **R-37 Phase 5 Commitment Decision**: Phase 5 is **formally committed and authorized** to follow Phase 4 GA launch. Kickoff: **Q2 2027**. Scope: FDNY / Chicago (2019 Edition) rule expansion and Storage Occupancy (Chapters 12–20 high-piled storage) ruleset expansion.
+- **Week 8 LA County Pre-Submittal Consultation Agenda**:
+  1. *Report Format & Layout*: Review `report.pdf` calculation summaries and pipe velocity/loss tables against LA County Title 24 plan review standards.
+  2. *Digital PE Stamp & Audit Trail*: Validate R-12 PE stamp signature block and audit log format.
+  3. *Local Amendments Verification*: Confirm California Fire Code (CFC) Title 24 local amendment application on LA County commercial office project.
+- **R-36 SUS Reporting & Screening Refinement**: External PEs ($N=8$) reported separately from beta firm PEs ($N=2$); screening criteria includes prior LA County submittal experience.

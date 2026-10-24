@@ -1,0 +1,26 @@
+{
+  "project_name": "Firm A LA County Commercial Office",
+  "jurisdiction": "LA County Fire Department",
+  "code_edition": "NFPA 13 (2022 Edition) + California Fire Code Title 24",
+  "pe_stamp": {
+    "pe_name": "Jane Doe, PE",
+    "pe_license": "FP-10492-CA",
+    "stamp_timestamp": "2026-10-23T10:00:00Z",
+    "audit_hash": "a8f9c3d4e5f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0"
+  },
+  "field_completeness": {
+    "project_metadata": "PRESENT",
+    "code_edition_tag": "PRESENT",
+    "hydraulic_summary": "PRESENT",
+    "k_factor_orifice_schedule": "PRESENT",
+    "velocity_and_pressure_loss_tables": "PRESENT",
+    "bcf_annotation_index": "PRESENT",
+    "pe_signature_block": "PRESENT",
+    "completeness_score_percent": 100.0
+  },
+  "hydraulic_summary": {
+    "total_system_flow_gpm": 250.0,
+    "demand_pressure_psi": 65.0,
+    "total_pipe_footage_ft": 3901.7
+  }
+}
