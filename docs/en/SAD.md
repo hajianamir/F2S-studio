@@ -213,3 +213,12 @@ The Fire Protection Design & Simulation Platform is an integrated, cloud-native 
 ### 5.26 R-20 Operative Acceptance Criterion & N=20 Deferred Statement
 - **Operative Acceptance Criterion**: The applied optimization acceptance criterion is defined as **mean footage reduction >= 8.0% across N=5 trials**, with individual trial variance accepted and 95% CI reported for transparency.
 - **N=20 Trial Deferral**: Statistical confirmation at 95% confidence with larger sample size (N >= 20 trials) is formally deferred to Phase 4.
+
+
+### 5.27 R-26 WebGPU Viewport Fallback Architecture
+- **WebGPU Primary Pipeline**: High-performance compute shader particle/pipe renderer targeting Chrome/Edge 113+.
+- **WebGL2 Graceful Fallback**: Auto-detects unsupported browser contexts (Safari / Firefox) and falls back to `Three.js` Instanced Mesh geometry with distance-based Level of Detail (LOD) culling, rendering a non-blocking notification badge in the UI.
+
+### 5.28 Phase 4 Phase-Level Exit Definition & Pre-Measurement Policy
+- **Phase Exit Gate**: Requires 1 active pilot project submittal to a municipal AHJ (FDNY / LA County Fire / Chicago Fire Bureau) using the platform-generated report package, a SUS usability score $\ge 75$ across 5 PEs, and WebGPU 1M rendering at $\ge 30$ fps.
+- **AI Target Policy**: The $8.0\%$ footage reduction target remains fixed; if loss function reinforcement drops reduction below $8.0\%$, optimizer heuristics will be improved rather than lowering the threshold.
