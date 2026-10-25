@@ -26,9 +26,14 @@
 
 ---
 
-## 4. AHJ Touchpoint Schedule & Mid-January Review Reality (R-43 Resolution)
-- **Mid-January 2027 Appointment (R-43 Clarification)**: Scheduled as an optional, preliminary pre-submittal consultation with LA County Fire Department Plan Examination Bureau officers (**First Preliminary AHJ Touchpoint**).
-- **Formal Submittal Date**: **February 15, 2027** (**First Official Municipal AHJ Submittal Touchpoint**). Plan review duration expected at 4–8 weeks; Phase 4 exit gate closure pending official AHJ review in Q1/Q2 2027.
+## 4. AHJ Touchpoint Schedule, Decision Criteria & Mid-January Review Reality
+- **Mid-January 2027 Appointment Status**: Aspirational request to be formally requested in December 2026 for mid-January 2027 (**First Preliminary AHJ Touchpoint**).
+- **Decision Criteria to Hold Mid-Jan Preliminary**: Held if 28-page package passes internal PDF render verification, both PE-of-record formatting findings are verified, and PE of record is available by January 8, 2027. Skipped if QA is incomplete by Jan 8, making Feb 15 formal submittal the sole AHJ touchpoint.
+- **Mid-Jan Finding Contingency Rules**:
+  - *Cosmetic Findings*: Feb 15 formal submittal target holds (remediated in <= 2 weeks).
+  - *Missing Section Findings*: Feb 15 target holds if fixable in <= 3 weeks; slips otherwise.
+  - *Structural/Methodology Findings*: Feb 15 formal submittal target slips; rescheduled after full remediation.
+- **Formal Submittal Target Date**: **February 15, 2027** (**First Official Municipal AHJ Submittal Touchpoint**). Plan review duration expected at 4–8 weeks; Phase 4 exit gate closure pending official AHJ review in Q1/Q2 2027.
 
 ---
 
