@@ -26,10 +26,14 @@
 
 ---
 
-## 4. AHJ Touchpoint Schedule, Decision Criteria & Mid-January Review Reality
-- **Mid-January 2027 Appointment Status**: Aspirational request to be formally requested in December 2026 for mid-January 2027 (**First Preliminary AHJ Touchpoint**).
-- **Decision Criteria to Hold Mid-Jan Preliminary**: Held if 28-page package passes internal PDF render verification, both PE-of-record formatting findings are verified, and PE of record is available by January 8, 2027. Skipped if QA is incomplete by Jan 8, making Feb 15 formal submittal the sole AHJ touchpoint.
+## 4. AHJ Touchpoint Schedule, Request Owner, Decision Criteria & Contingencies
+- **Mid-January 2027 Appointment Request Details**:
+  - *Request Owner*: PE of Record for Beta Firm A.
+  - *Request Date*: **December 1, 2026** (Formal request submission to LACoFD Plan Examination Bureau).
+  - *Confirmation Deadline*: **December 31, 2026**.
+- **Decision Criteria to Hold Mid-Jan Preliminary**: Held if 28-page package passes internal PDF render verification, both PE-of-record formatting findings are verified, and PE of record is available by January 8, 2027.
 - **Mid-Jan Finding Contingency Rules**:
+  - *Unconfirmed by Dec 31, 2026*: Team ceases appointment scheduling attempts. February 15, 2027 formal submittal proceeds as scheduled as the sole AHJ touchpoint.
   - *Cosmetic Findings*: Feb 15 formal submittal target holds (remediated in <= 2 weeks).
   - *Missing Section Findings*: Feb 15 target holds if fixable in <= 3 weeks; slips otherwise.
   - *Structural/Methodology Findings*: Feb 15 formal submittal target slips; rescheduled after full remediation.
@@ -39,4 +43,4 @@
 
 ## 5. SUS Usability Panel Progress (Sprint 4.2)
 - **Panel Status**: $N=10$ total licensed FPEs recruited (2 Beta Firm A PEs + 8 Respondent.io panel FPEs).
-- **Evaluation Schedule**: Testing actively ongoing; complete SUS usability score report scheduled for the **Week 10 Checkpoint Report**.
+- **Evaluation Schedule**: Testing actively ongoing; complete SUS usability score report (primary external $N=8$, secondary beta $N=2$) scheduled for the **Week 10 Checkpoint Report**.
