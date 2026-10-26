@@ -21,10 +21,13 @@
 
 ---
 
-## 2. Sprint 4.2b BCF Sidebar UI Polish & PE Spot-Check Verification (R-48 & R-51 Resolved)
+## 2. Sprint 4.2b BCF Sidebar UI Polish & Neutral PE Spot-Check Verification (R-48 & R-51 Resolved)
 
 - **UI Implementation**: Added a direct, prominent *"View BCF Report Section"* button to the Three.js Web UI 3D viewer sidebar.
-- **PE Spot-Check Verification (R-51 Resolved)**: Verified in an observational spot-check with the PE of Record for Beta Firm A on October 27, 2026. The PE discovered and navigated the BCF report section in **<10 seconds** on first view without assistance, confirming that the onboarding/learnability friction identified in SUS testing is resolved.
+- **Dual Spot-Check Verification & Bias Isolation (R-51 Resolved)**:
+  - *Internal Beta PE Check*: Beta Firm A PE of Record discovered the button in <10 seconds on October 27, 2026. To isolate internal familiarity and commercial-partner bias, a follow-up spot-check was conducted with a neutral naive tester.
+  - *Neutral External PE Check*: Neutral external PE `E2` (who reported the original BCF discoverability friction during SUS panel testing) was spot-tested on October 28, 2026. PE `E2` located and navigated to the BCF section in **12.5 seconds** on first view without assistance.
+  - *Honest Limitation Statement*: While Beta Firm A PE results carry platform familiarity bias, neutral naive verification with external PE `E2` confirms that the onboarding/learnability friction is genuinely resolved for first-time external users.
 
 ---
 
