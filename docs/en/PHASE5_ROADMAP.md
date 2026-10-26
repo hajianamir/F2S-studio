@@ -165,3 +165,17 @@ Phase 5 engineering executes in parallel with the external Phase 4 LA County Mun
   - Firm A (Feb 15, 2027): Frozen on tag `v1.0.0-phase4-frozen`.
   - Firm B (April 15, 2027): Frozen on tag `v1.1.0-phase5-firmb-frozen`.
 - **Isolation**: Platform core or template updates in Phase 5 do NOT retroactively modify or invalidate Firm A’s frozen submittal artifact.
+
+
+---
+
+## 10. Shared-Code Patch Process & Pentest Risk Acceptance (Week 8 Final Resolutions)
+
+### Shared-Code Bug Fix Process (R-73 Policy)
+- **Cherry-Pick Patch Protocol**: Shared-code bug fixes discovered during Phase 5 development that affect core hydraulic or rules engine components are cherry-picked to the Phase 4 frozen release via `v1.0.1-*` patch tags.
+- **Refactoring Isolation**: Architectural refactors or new features introduced in Phase 5 do NOT propagate backward to `v1.0.0-phase4-frozen`. Firm A post-submittal corrections apply exclusively to `v1.0.x-*` release tags.
+
+### Pentest Documented Acceptance Path (R-72 Risk Standard)
+- **Critical Vulnerabilities**: **Hard Blocking Gate** — Must be 100% remediated prior to Phase 5 software exit.
+- **High Vulnerabilities**: Require zero unmitigated High findings. If a High finding cannot be remediated within Sprint 5.3 time-box, it may be accepted **ONLY** with a documented compensating control (e.g., mTLS boundary, WAF filtering, 10 Hz rate limiting) and formal PE risk sign-off.
+- **Medium & Low Vulnerabilities**: Logged to a tracked Phase 6 security backlog.
