@@ -1,0 +1,56 @@
+{
+  "standard": "NFPA 13",
+  "edition": "2019",
+  "rules": [
+    {
+      "id": "NFPA13-2019-R01",
+      "category": "Sprinkler Spacing",
+      "clause": "8.6.2.2.1",
+      "description": "Maximum distance between sprinklers for Light Hazard occupancies shall not exceed 15 ft.",
+      "parameter": "max_spacing_ft",
+      "operator": "<=",
+      "value": 15.0,
+      "unit": "ft"
+    },
+    {
+      "id": "NFPA13-2019-R02",
+      "category": "Sprinkler Spacing",
+      "clause": "8.6.2.2.2",
+      "description": "Maximum coverage area per sprinkler for Light Hazard shall not exceed 225 sq ft.",
+      "parameter": "max_coverage_area_sqft",
+      "operator": "<=",
+      "value": 225.0,
+      "unit": "sqft"
+    },
+    {
+      "id": "NFPA13-2019-R03",
+      "category": "Hydraulic Design",
+      "clause": "11.2.3.1.1",
+      "description": "Minimum operating pressure for any sprinkler shall not be less than 7.0 psi.",
+      "parameter": "min_pressure_psi",
+      "operator": ">=",
+      "value": 7.0,
+      "unit": "psi"
+    },
+    {
+      "id": "NFPA13-2019-R04",
+      "category": "Concealed Spaces",
+      "clause": "8.15.1.2",
+      "description": "Concealed spaces constructed of combustible materials require sprinkler protection.",
+      "parameter": "concealed_space_sprinkler_required",
+      "operator": "==",
+      "value": true,
+      "unit": "boolean"
+    },
+    {
+      "id": "NFPA13-2019-R05",
+      "category": "Pipe Velocity",
+      "clause": "23.4.4.1",
+      "description": "Maximum velocity in feed mains shall not exceed 20 ft/s.",
+      "parameter": "max_pipe_velocity_fps",
+      "operator": "<=",
+      "value": 20.0,
+      "unit": "ft/s"
+    }
+  ]
+}
