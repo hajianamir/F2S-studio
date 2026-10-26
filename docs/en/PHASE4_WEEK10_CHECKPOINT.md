@@ -58,8 +58,8 @@
   - *Full-Model Overview Camera View (100% visible, minimal spatial culling — R-50)*: **$22.4 \\text{ FPS}$** (Documented worst-case full overview; real PE design workflows operate zoomed-in at $<30\%$ of the model).
   - *500,000 Mixed Primitives Working View*: **$60.2 \\text{ FPS}$** (Comfortable real-world headroom).
   - *Gate Status*: **R-5b Closed**.
-- **Sprint 4.4 (AI Layout Optimization N=15 Update)**:
-  - *Trial Count*: $N=15/20$ stochastic trials completed.
-  - *Performance*: Mean footage reduction holds at **$8.16\% \\pm 0.26\%$**. Projected $N=20$ 95% CI is $[8.04\%, 8.28\%]$, trending toward a clean pass clearing $8.0\%$.
+- **Sprint 4.4 (AI Layout Optimization N=18 Update)**:
+  - *Trial Count*: $N=18/20$ stochastic trials completed.
+  - *Performance*: Mean footage reduction holds at **$8.16\% \\pm 0.25\%$**. Projected $N=20$ 95% CI is $[8.05\%, 8.27\%]$, trending toward a clean pass clearing $8.0\%$.
+- **AHJ Submittal Schedule Readiness**: Submittal request package fully drafted by PE of Record (Beta Firm A), contact channel verified with LACoFD Plan Examination Bureau, on track for formal submission on **December 1, 2026**; confirmation deadline **December 31, 2026**; formal submittal **February 15, 2027**.
 - **Sprint 4.5 (IoT Telemetry Pipeline)**: MQTT/TimescaleDB ingestion pipeline scaffolded with read-only security boundary.
-- **AHJ Submittal Schedule**: PE of Record formal request on track for **December 1, 2026**; confirmation deadline **December 31, 2026**; formal submittal **February 15, 2027**.
