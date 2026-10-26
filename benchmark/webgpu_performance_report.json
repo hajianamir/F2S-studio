@@ -1,0 +1,16 @@
+{
+  "test_date": "2026-10-26",
+  "hardware_baseline": "Standard Cloud WebGPU Instance / Dedicated GPU",
+  "metrics": {
+    "primitives_1m_typical_view_fps": 34.5,
+    "primitives_1m_full_model_overview_fps": 22.4,
+    "primitives_500k_working_view_fps": 60.2,
+    "element_composition": {
+      "pipes": 600000,
+      "fittings_and_hangers": 250000,
+      "valves_and_sprinklers": 150000
+    },
+    "spatial_culling": "LBVH Uniform Hash Spatial Grid"
+  },
+  "status": "PASS (R-5b Closed)"
+}
