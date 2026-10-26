@@ -177,5 +177,5 @@ Phase 5 engineering executes in parallel with the external Phase 4 LA County Mun
 
 ### Pentest Documented Acceptance Path (R-72 Risk Standard)
 - **Critical Vulnerabilities**: **Hard Blocking Gate** — Must be 100% remediated prior to Phase 5 software exit.
-- **High Vulnerabilities**: Require zero unmitigated High findings. If a High finding cannot be remediated within Sprint 5.3 time-box, it may be accepted **ONLY** with a documented compensating control (e.g., mTLS boundary, WAF filtering, 10 Hz rate limiting) and formal PE risk sign-off.
+- **High Vulnerabilities**: Require zero unmitigated High findings. If a High finding cannot be remediated within Sprint 5.3 time-box, it may be accepted **ONLY** with a documented compensating control (e.g., mTLS boundary, WAF filtering, 10 Hz rate limiting) and formal sign-off by the CTO or designated Security Lead. The PE of record may be consulted regarding compensating control impact on fire protection functionality, but security risk acceptance is strictly signed by the executive with cybersecurity authority.
 - **Medium & Low Vulnerabilities**: Logged to a tracked Phase 6 security backlog.
