@@ -116,3 +116,34 @@ Phase 5 engineering executes in parallel with the external Phase 4 LA County Mun
   - *Validation Approach*: Built against reconstructed 2019 FDNY Building Code submittal checklists tagged `[~]` per standing provenance policy. Validation via PE review prior to Phase 5 close.
 - **Sprint 5.5 (Chicago Title 14B Template - R-66 & R-67 Resolved)**:
   - *Validation Approach*: Built against reconstructed Chicago Title 14B (Fire Prevention) requirements tagged `[~]` (correcting pre-Phase 5 Ch 15-16 references). Validation via PE review prior to Phase 5 close.
+
+
+---
+
+## 8. Phase 5 Forward Commitments & Exit Gate Definition (Week 7 Resolutions)
+
+### Sprint 5.3 IoT Production Details (R-65 Resolved)
+- **Ownership**: Lead IoT Systems Engineer.
+- **Start Date**: **January 15, 2027** (Calendar-driven start, independent of Phase 4 exit gate).
+- **Scope**: mTLS 1.3 client certificates, RBAC, 10 Hz rate limiting, TimescaleDB retention policy, access audit logging, and external pentest audit.
+
+### Sprint 5.4 / 5.5 Template Deferral & GA Positioning Statement (R-66 Resolved)
+- **Template Status**: FDNY and Chicago submittal templates render against reconstructed `[~]` plan exam requirements.
+- **Explicit Deferral**: AHJ format validation of rendered templates is deferred to the first real FDNY or Chicago submission (Phase 6 or customer-triggered).
+- **Positioning Rule**: GA positioning will explicitly state *"FDNY/Chicago submittal templates available; AHJ format validation pending"* rather than claiming "AHJ Supported".
+
+### Sprint 5.6 Firm B Warehouse Pilot Status (R-68 Resolved)
+- **Project Readiness**: Firm B 25-ft high-piled storage warehouse design is **100% complete**.
+- **Submittal Target**: Target submission date is **April 15, 2027 (Q2 2027)** to LA County Fire Department.
+
+### Sprint 5.7 GA Positioning Triggers (R-69 Resolved)
+- **Trigger 1**: Transition from *"Planned"* to *"Templates Available"* occurs automatically upon Sprint 5.4/5.5 code completion.
+- **Trigger 2**: Transition to *"AHJ Approved"* occurs only upon receipt of formal municipal review pass.
+
+### Phase 5 Exit Gate Definition (R-70 Resolved)
+> **Phase 5 Exit Gate**: Phase 5 officially exits when:
+> 1. NFPA 13 (2019) and NFPA 13 Storage (2022) rulesets evaluate cleanly with verified non-compliant discriminator tests (Sprints 5.1 & 5.2 closed).
+> 2. FDNY and Chicago templates render correctly against `[~]` reconstructed requirements (Sprints 5.4 & 5.5 complete).
+> 3. IoT production pipeline meets full R-13 security scope and passes external pentest audit (Sprint 5.3 complete).
+> 4. GA positioning language is updated to reflect *"Templates Available, AHJ Validation Pending"* for FDNY/Chicago (Sprint 5.7 complete).
+> *Note*: Formal municipal submittal/approval of Firm B’s warehouse (Sprint 5.6) is an external Phase 6 or Phase 5 extension event and is NOT a blocking condition for Phase 5 software engineering exit.
