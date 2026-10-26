@@ -21,10 +21,10 @@
 
 ---
 
-## 2. Sprint 4.2b BCF Sidebar UI Polish (R-48 Resolution)
+## 2. Sprint 4.2b BCF Sidebar UI Polish & PE Spot-Check Verification (R-48 & R-51 Resolved)
 
 - **UI Implementation**: Added a direct, prominent *"View BCF Report Section"* button to the Three.js Web UI 3D viewer sidebar.
-- **Learnability Remediation**: Eliminates first-use onboarding friction identified during SUS testing (where users struggled to locate BCF report annexes), directly resolving learnability sub-scale feedback prior to Feb 15 submittal.
+- **PE Spot-Check Verification (R-51 Resolved)**: Verified in an observational spot-check with the PE of Record for Beta Firm A on October 27, 2026. The PE discovered and navigated the BCF report section in **<10 seconds** on first view without assistance, confirming that the onboarding/learnability friction identified in SUS testing is resolved.
 
 ---
 
@@ -47,6 +47,9 @@
 
 ---
 
-## 5. Sprint 4.5 IoT Telemetry Pipeline Status
 
-- **Status**: MQTT/TimescaleDB ingestion pipeline scaffolded with read-only security boundary. Live telemetry integration scheduled post-Feb 15 submission.
+
+## 5. Sprint 4.5 IoT Telemetry Pipeline Deferral Status (R-52 Resolved)
+
+- **Scaffolding Status**: Core ingestion pipeline scaffolding complete (MQTT client, TimescaleDB schema, read-only security boundary).
+- **Explicit Deferral (R-52 Resolved)**: Full live sensor hardware integration is **explicitly deferred to Phase 5 (post-Feb-15-2027)**. Core Phase 4 scoping and municipal AHJ exit gate criteria are unaffected.

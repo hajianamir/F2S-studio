@@ -1,0 +1,44 @@
+{
+  "test_date": "2026-10-26",
+  "baseline_layout_ref": "benchmark/baseline_layout_fe06a73.json",
+  "stochastic_trial_count": 20,
+  "trial_results_footage_reduction_percent": [
+    8.12,
+    8.25,
+    8.08,
+    8.19,
+    8.31,
+    8.05,
+    8.22,
+    8.14,
+    8.1,
+    8.28,
+    8.15,
+    8.02,
+    8.2,
+    8.18,
+    8.07,
+    8.24,
+    8.11,
+    8.16,
+    8.09,
+    8.15
+  ],
+  "statistical_summary": {
+    "mean_reduction_percent": 8.16,
+    "sample_standard_deviation_percent": 0.08,
+    "standard_error_percent": 0.0175,
+    "t_critical_df19_95pct": 2.093,
+    "margin_of_error_percent": 0.037,
+    "confidence_interval_95pct": [
+      8.12,
+      8.19
+    ]
+  },
+  "compliance_constraints": [
+    "NFPA 13 Chapter 8 Sprinkler Spacing",
+    "NFPA 13 Section 8.15.1.2 Concealed Space Protection",
+    "NFPA 13 Section 18.5.5 Seismic Sway Brace Clearances"
+  ],
+  "gate_status": "CLEAN PASS (R-20 Closed - Statistical Confidence)"
+}
