@@ -6,7 +6,7 @@
       "id": "NFPA13-2019-R01",
       "category": "Sprinkler Spacing",
       "clause": "8.6.2.2.1",
-      "description": "Maximum distance between sprinklers for Light Hazard occupancies shall not exceed 15 ft.",
+      "description": "Maximum distance between sprinklers for Light Hazard shall not exceed 15 ft.",
       "parameter": "max_spacing_ft",
       "operator": "<=",
       "value": 15.0,
@@ -51,6 +51,106 @@
       "operator": "<=",
       "value": 20.0,
       "unit": "ft/s"
+    },
+    {
+      "id": "NFPA13-2019-R06",
+      "category": "Hanger Spacing",
+      "clause": "9.2.2.1",
+      "description": "Maximum distance between pipe hangers for 1-inch steel pipe shall not exceed 12 ft.",
+      "parameter": "max_hanger_spacing_ft",
+      "operator": "<=",
+      "value": 12.0,
+      "unit": "ft"
+    },
+    {
+      "id": "NFPA13-2019-R07",
+      "category": "Hanger Spacing",
+      "clause": "9.2.2.2",
+      "description": "Maximum distance between pipe hangers for 1.5-inch steel pipe shall not exceed 14 ft.",
+      "parameter": "max_hanger_spacing_ft",
+      "operator": "<=",
+      "value": 14.0,
+      "unit": "ft"
+    },
+    {
+      "id": "NFPA13-2019-R08",
+      "category": "Hose Stream Allowance",
+      "clause": "11.2.3.1.2",
+      "description": "Minimum hose stream allowance for Light Hazard shall be 100 gpm (vs 250 gpm in Ordinary Hazard).",
+      "parameter": "hose_stream_allowance_gpm",
+      "operator": ">=",
+      "value": 100.0,
+      "unit": "gpm"
+    },
+    {
+      "id": "NFPA13-2019-R09",
+      "category": "Water Supply Duration",
+      "clause": "11.2.3.1.3",
+      "description": "Minimum water supply duration for Light Hazard shall be 30 minutes.",
+      "parameter": "water_supply_duration_min",
+      "operator": ">=",
+      "value": 30.0,
+      "unit": "min"
+    },
+    {
+      "id": "NFPA13-2019-R10",
+      "category": "Pipe Sizing",
+      "clause": "23.5.2.1",
+      "description": "Minimum pipe size for branch lines supplying sprinklers shall be 1.0 inch.",
+      "parameter": "min_branch_pipe_size_in",
+      "operator": ">=",
+      "value": 1.0,
+      "unit": "in"
+    },
+    {
+      "id": "NFPA13-2019-R11",
+      "category": "Deflector Distance",
+      "clause": "8.6.4.1.1",
+      "description": "Distance from deflector to ceiling shall be between 1 in and 12 in.",
+      "parameter": "deflector_ceiling_dist_in",
+      "operator": "<=",
+      "value": 12.0,
+      "unit": "in"
+    },
+    {
+      "id": "NFPA13-2019-R12",
+      "category": "Obstruction Clearance",
+      "clause": "8.6.5.2.1",
+      "description": "Sprinklers shall be positioned at least 18 in below obstructions.",
+      "parameter": "obstruction_clearance_in",
+      "operator": ">=",
+      "value": 18.0,
+      "unit": "in"
+    },
+    {
+      "id": "NFPA13-2019-R13",
+      "category": "Seismic Clearance",
+      "clause": "9.3.4.1",
+      "description": "Clearance around pipes penetrating walls/floors shall be a minimum of 2 in (2019 value vs 2022 value delta).",
+      "parameter": "seismic_wall_clearance_in",
+      "operator": ">=",
+      "value": 2.0,
+      "unit": "in"
+    },
+    {
+      "id": "NFPA13-2019-R14",
+      "category": "System Drain",
+      "clause": "8.16.2.4",
+      "description": "Main drain valve size for 2-inch or larger risers shall be a minimum of 1.25 in.",
+      "parameter": "main_drain_size_in",
+      "operator": ">=",
+      "value": 1.25,
+      "unit": "in"
+    },
+    {
+      "id": "NFPA13-2019-R15",
+      "category": "Inspector Test Connection",
+      "clause": "8.17.4.2",
+      "description": "Inspector test connection orifice size shall be equal to the smallest sprinkler installed.",
+      "parameter": "inspector_test_orifice_equal",
+      "operator": "==",
+      "value": true,
+      "unit": "boolean"
     }
   ]
 }
