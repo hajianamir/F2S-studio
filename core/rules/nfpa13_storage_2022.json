@@ -1,0 +1,256 @@
+{
+  "standard": "NFPA 13 Storage",
+  "edition": "2022",
+  "rules": [
+    {
+      "id": "NFPA13-STORAGE-R01",
+      "category": "ESFR Point Hydraulics",
+      "clause": "23.3.1",
+      "description": "Minimum operating pressure for ESFR K-16.8 sprinklers shall be 52.0 psi.",
+      "parameter": "esfr_min_pressure_psi",
+      "operator": ">=",
+      "value": 52.0,
+      "unit": "psi"
+    },
+    {
+      "id": "NFPA13-STORAGE-R02",
+      "category": "ESFR Point Hydraulics",
+      "clause": "23.3.2",
+      "description": "Minimum design shape head count for ESFR sprinklers shall be 12 heads.",
+      "parameter": "esfr_min_design_heads",
+      "operator": ">=",
+      "value": 12,
+      "unit": "heads"
+    },
+    {
+      "id": "NFPA13-STORAGE-R03",
+      "category": "ESFR Point Hydraulics",
+      "clause": "23.3.3",
+      "description": "Hose stream allowance for High-Piled Storage shall be a minimum of 250 gpm.",
+      "parameter": "hose_stream_allowance_gpm",
+      "operator": ">=",
+      "value": 250.0,
+      "unit": "gpm"
+    },
+    {
+      "id": "NFPA13-STORAGE-R04",
+      "category": "ESFR Point Hydraulics",
+      "clause": "23.3.4",
+      "description": "Water supply duration for ESFR Storage shall be at least 60 minutes.",
+      "parameter": "water_supply_duration_min",
+      "operator": ">=",
+      "value": 60.0,
+      "unit": "min"
+    },
+    {
+      "id": "NFPA13-STORAGE-R05",
+      "category": "ESFR Point Hydraulics",
+      "clause": "23.3.5",
+      "description": "Branch line minimum pipe size for ESFR shall be 1.25 inches.",
+      "parameter": "min_esfr_branch_pipe_size_in",
+      "operator": ">=",
+      "value": 1.25,
+      "unit": "in"
+    },
+    {
+      "id": "NFPA13-STORAGE-R06",
+      "category": "ESFR Point Hydraulics",
+      "clause": "23.3.6",
+      "description": "Maximum distance between ESFR sprinklers shall be 12.0 ft.",
+      "parameter": "max_esfr_spacing_ft",
+      "operator": "<=",
+      "value": 12.0,
+      "unit": "ft"
+    },
+    {
+      "id": "NFPA13-STORAGE-R07",
+      "category": "ESFR Point Hydraulics",
+      "clause": "23.3.7",
+      "description": "Minimum distance between ESFR sprinklers shall be 8.0 ft.",
+      "parameter": "min_esfr_spacing_ft",
+      "operator": ">=",
+      "value": 8.0,
+      "unit": "ft"
+    },
+    {
+      "id": "NFPA13-STORAGE-R08",
+      "category": "ESFR Point Hydraulics",
+      "clause": "23.3.8",
+      "description": "Maximum coverage area per ESFR sprinkler shall not exceed 100 sq ft.",
+      "parameter": "max_esfr_coverage_sqft",
+      "operator": "<=",
+      "value": 100.0,
+      "unit": "sqft"
+    },
+    {
+      "id": "NFPA13-STORAGE-R09",
+      "category": "ESFR Point Hydraulics",
+      "clause": "23.3.9",
+      "description": "Deflector distance below ceiling for ESFR pendant sprinklers shall be between 6 in and 14 in.",
+      "parameter": "esfr_deflector_ceiling_dist_in",
+      "operator": "<=",
+      "value": 14.0,
+      "unit": "in"
+    },
+    {
+      "id": "NFPA13-STORAGE-R10",
+      "category": "ESFR Point Hydraulics",
+      "clause": "23.3.10",
+      "description": "Clearance from ESFR deflector to top of storage shall be at least 36.0 inches.",
+      "parameter": "esfr_top_storage_clearance_in",
+      "operator": ">=",
+      "value": 36.0,
+      "unit": "in"
+    },
+    {
+      "id": "NFPA13-STORAGE-R11",
+      "category": "Commodity Class",
+      "clause": "20.2.1",
+      "description": "Class III Commodity storage height limit for ESFR K-16.8 shall not exceed 25 ft.",
+      "parameter": "max_storage_height_ft",
+      "operator": "<=",
+      "value": 25.0,
+      "unit": "ft"
+    },
+    {
+      "id": "NFPA13-STORAGE-R12",
+      "category": "Commodity Class",
+      "clause": "20.2.2",
+      "description": "Maximum ceiling height for 25-ft storage under ESFR K-16.8 shall not exceed 30 ft.",
+      "parameter": "max_ceiling_height_ft",
+      "operator": "<=",
+      "value": 30.0,
+      "unit": "ft"
+    },
+    {
+      "id": "NFPA13-STORAGE-R13",
+      "category": "Commodity Class",
+      "clause": "20.2.3",
+      "description": "Palletized / rack storage arrangement classification must be Class I-IV.",
+      "parameter": "commodity_class_valid",
+      "operator": "==",
+      "value": true,
+      "unit": "boolean"
+    },
+    {
+      "id": "NFPA13-STORAGE-R14",
+      "category": "Commodity Class",
+      "clause": "20.2.4",
+      "description": "Encapsulated storage adjustment factors must be applied if storage is shrink-wrapped.",
+      "parameter": "encapsulated_storage_verified",
+      "operator": "==",
+      "value": true,
+      "unit": "boolean"
+    },
+    {
+      "id": "NFPA13-STORAGE-R15",
+      "category": "Commodity Class",
+      "clause": "20.2.5",
+      "description": "Solid shelf rack area limits shall not exceed 20 sq ft without in-rack protection.",
+      "parameter": "max_solid_shelf_area_sqft",
+      "operator": "<=",
+      "value": 20.0,
+      "unit": "sqft"
+    },
+    {
+      "id": "NFPA13-STORAGE-R16",
+      "category": "Commodity Class",
+      "clause": "20.2.6",
+      "description": "Open rack flue space requirements must be maintained.",
+      "parameter": "open_rack_flue_verified",
+      "operator": "==",
+      "value": true,
+      "unit": "boolean"
+    },
+    {
+      "id": "NFPA13-STORAGE-R17",
+      "category": "Commodity Class",
+      "clause": "20.2.7",
+      "description": "Maximum temperature rating for ESFR sprinklers shall be Ordinary or Intermediate (155-200F).",
+      "parameter": "esfr_temp_rating_valid",
+      "operator": "==",
+      "value": true,
+      "unit": "boolean"
+    },
+    {
+      "id": "NFPA13-STORAGE-R18",
+      "category": "Commodity Class",
+      "clause": "20.2.8",
+      "description": "Thermal responsiveness index (RTI) for ESFR sprinklers must be Fast Response (RTI < 50).",
+      "parameter": "esfr_rti_fast_response",
+      "operator": "==",
+      "value": true,
+      "unit": "boolean"
+    },
+    {
+      "id": "NFPA13-STORAGE-R19",
+      "category": "Commodity Class",
+      "clause": "20.2.9",
+      "description": "K-factor for ESFR heads in 30-ft ceiling / 25-ft storage shall be a minimum of 16.8.",
+      "parameter": "min_esfr_k_factor",
+      "operator": ">=",
+      "value": 16.8,
+      "unit": "gpm/psi^0.5"
+    },
+    {
+      "id": "NFPA13-STORAGE-R20",
+      "category": "Commodity Class",
+      "clause": "20.2.10",
+      "description": "Draft curtains or structural roof bays must enclose ESFR protection zones.",
+      "parameter": "esfr_bay_enclosure_verified",
+      "operator": "==",
+      "value": true,
+      "unit": "boolean"
+    },
+    {
+      "id": "NFPA13-STORAGE-R21",
+      "category": "Racking & Aisle Clearance",
+      "clause": "21.1.1",
+      "description": "Longitudinal flue space width in double-row racks shall be at least 6.0 inches.",
+      "parameter": "min_longitudinal_flue_in",
+      "operator": ">=",
+      "value": 6.0,
+      "unit": "in"
+    },
+    {
+      "id": "NFPA13-STORAGE-R22",
+      "category": "Racking & Aisle Clearance",
+      "clause": "21.1.2",
+      "description": "Transverse flue space width between rack pallets shall be at least 6.0 inches.",
+      "parameter": "min_transverse_flue_in",
+      "operator": ">=",
+      "value": 6.0,
+      "unit": "in"
+    },
+    {
+      "id": "NFPA13-STORAGE-R23",
+      "category": "Racking & Aisle Clearance",
+      "clause": "21.1.3",
+      "description": "Aisle width between storage racks shall be a minimum of 8.0 ft for ESFR.",
+      "parameter": "min_aisle_width_ft",
+      "operator": ">=",
+      "value": 8.0,
+      "unit": "ft"
+    },
+    {
+      "id": "NFPA13-STORAGE-R24",
+      "category": "Racking & Aisle Clearance",
+      "clause": "21.1.4",
+      "description": "Clearance between bottom of roof truss and top of storage shall be at least 36 inches.",
+      "parameter": "min_roof_truss_clearance_in",
+      "operator": ">=",
+      "value": 36.0,
+      "unit": "in"
+    },
+    {
+      "id": "NFPA13-STORAGE-R25",
+      "category": "Racking & Aisle Clearance",
+      "clause": "21.1.5",
+      "description": "Walkway / main aisle width for fork truck movement shall be at least 10.0 ft.",
+      "parameter": "min_main_aisle_width_ft",
+      "operator": ">=",
+      "value": 10.0,
+      "unit": "ft"
+    }
+  ]
+}

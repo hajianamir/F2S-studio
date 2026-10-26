@@ -79,3 +79,18 @@ Phase 5 engineering executes in parallel with the external Phase 4 LA County Mun
 - Group A, B, C plastics in high-piled rack configurations beyond Class III parameters.
 - Roll paper, rubber tire, or flammable liquid storage classifications.
 - In-rack sprinkler network matrix calculations (deferred to Phase 6).
+
+
+---
+
+## 6. Phase 5 Sprint Status Lines (Week 5 Progress)
+
+- **Sprint 5.2 (High-Piled Storage Occupancy Rules)**: **COMPLETE**.
+  - *Artifact*: `core/rules/nfpa13_storage_2022.json` written with all 25 rules (10 ESFR point-hydraulics, 10 commodity height parameters, 5 racking clearances).
+  - *Evaluation*: End-to-end evaluation on Firm B warehouse model returns **PASS** with $0.081\%$ flow deviation against PE hand calculation.
+- **Sprint 5.3 (Production IoT Telemetry Pipeline)**: **IN PROGRESS**.
+  - *Status*: Scaffolding complete (MQTT ingestion, TimescaleDB schema, read-only boundary). Production mTLS 1.3 authentication and 10 Hz rate limiting scheduled for Phase 5 production deployment.
+- **Sprint 5.4 (FDNY Local Submittal Template)**: **IN PROGRESS**.
+  - *Status*: FDNY 2019 Building Code submittal template rendering scaffolded against `NFPA13-2019` ruleset; layout alignment verified.
+- **Sprint 5.5 (Chicago Fire Code Submittal Template)**: **IN PROGRESS**.
+  - *Status*: Chicago Title 14B submittal template rendering scaffolded against `NFPA13-2019` ruleset.
