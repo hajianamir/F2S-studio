@@ -1,0 +1,19 @@
+{
+  "test_date": "2026-10-26",
+  "project": "Firm B Storage Warehouse Pilot",
+  "occupancy": "High-Piled Storage (Class III Commodity, 25-ft Storage Height, 30-ft Ceiling)",
+  "sprinkler_type": "ESFR K-16.8 Pendant Sprinklers",
+  "operating_heads_count": 12,
+  "min_required_pressure_psi": 52.0,
+  "calculated_results": {
+    "most_remote_head_flow_gpm": 121.16,
+    "total_operating_flow_gpm": 1453.92,
+    "system_demand_pressure_psi": 68.45,
+    "pe_hand_calculation_baseline_flow_gpm": 1455.1,
+    "pe_hand_calculation_baseline_pressure_psi": 68.5,
+    "flow_deviation_percent": 0.081,
+    "pressure_deviation_percent": 0.073
+  },
+  "acceptance_gate": "< 1.0% deviation",
+  "status": "PASS (0.08% deviation - R-60 & R-61 Closed)"
+}

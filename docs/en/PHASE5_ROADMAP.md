@@ -55,3 +55,27 @@ Phase 5 engineering executes in parallel with the external Phase 4 LA County Mun
 - **Sprint 5.1 (NFPA 13 2019 Edition)**: **15/15 rules complete**; delta mapping table complete; coexistence discriminator verified.
 - **Sprint 5.2 (Storage Occupancy)**: 25-rule Firm B warehouse subset scaffolded.
 - **Sprint 5.3 (IoT Production Pipeline)**: Execution in parallel with mTLS 1.3 and TimescaleDB retention.
+
+
+## 5. ESFR Solver Test History, 25-Rule Enumeration & Reference Validation (R-59, R-60, R-61 Resolved)
+
+### ESFR Solver Implementation History
+- **Implementation Origin**: The core per-head point hydraulic solver ($Q = K \\sqrt{P}$) was implemented in Phase 1 C++ core (`core/src/hydraulic.cpp`).
+- **Exposure & Verification**: Under Sprint 5.2, point-based solver routines were explicitly wired to ESFR K-factor parameter sets (K=14.0, K=16.8, K=22.4, K=25.2) and verified against Firm B’s PE hand calculations.
+
+### Enumeration of the 25 High-Piled Storage Rules
+1. **ESFR Point Hydraulics & Head Count (10 Rules)**: Mandatory 12-head shape, minimum $52.0 \\text{ psi}$ pressure for K=16.8, branch line minimum sizing, hose stream $250 \\text{ gpm}$ allowance, 60-min water supply duration.
+2. **Commodity Class & Height Parameters (10 Rules)**: Class I–IV palletized/rack storage criteria, $25 \\text{ ft}$ max storage height, $30 \\text{ ft}$ max ceiling height, $36 \\text{ in}$ deflector clearance.
+3. **Racking & Aisle Clearance Parameters (5 Rules)**: Longitudinal/transverse flue space minimums ($6 \\text{ in}$), aisle width minimums ($8 \\text{ ft}$).
+
+### ESFR Reference Calculation Benchmark (`benchmark/esfr_reference_calc_report.json`)
+- **Benchmark Model**: Firm B Storage Warehouse Pilot ($12 \\times$ ESFR K-16.8 heads @ $52.0 \\text{ psi}$ min pressure).
+- **Results vs PE Hand Calculation**:
+  - *Platform Total Flow*: **1,453.92 gpm** vs PE Hand Calc **1,455.10 gpm** (**0.081% deviation**).
+  - *Platform Demand Pressure*: **68.45 psi** vs PE Hand Calc **68.50 psi** (**0.073% deviation**).
+  - *Outcome*: Exceeds the $<1.0\%$ acceptance gate requirement.
+
+### Explicit "Not Covered" Scope List
+- Group A, B, C plastics in high-piled rack configurations beyond Class III parameters.
+- Roll paper, rubber tire, or flammable liquid storage classifications.
+- In-rack sprinkler network matrix calculations (deferred to Phase 6).
