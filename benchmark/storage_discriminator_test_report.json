@@ -1,0 +1,19 @@
+{
+  "test_date": "2026-10-26",
+  "test_type": "Non-Compliant Discriminator Test (Sprint 5.2 Verification)",
+  "baseline_model": "Firm B Storage Warehouse Pilot",
+  "non_compliant_variant": {
+    "modified_parameter": "esfr_operating_heads_count",
+    "modified_value": 11,
+    "required_value": 12,
+    "target_rule_id": "NFPA13-STORAGE-R02",
+    "clause": "23.3.2"
+  },
+  "evaluation_results": {
+    "verdict": "FAIL",
+    "fired_rule_id": "NFPA13-STORAGE-R02",
+    "fired_rule_description": "Minimum design shape head count for ESFR sprinklers shall be 12 heads.",
+    "eval_status": "ACTIVE_EVALUATION_CONFIRMED"
+  },
+  "status": "PASS (Discriminator Test Successful - R-63 Closed)"
+}

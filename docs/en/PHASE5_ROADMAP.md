@@ -94,3 +94,25 @@ Phase 5 engineering executes in parallel with the external Phase 4 LA County Mun
   - *Status*: FDNY 2019 Building Code submittal template rendering scaffolded against `NFPA13-2019` ruleset; layout alignment verified.
 - **Sprint 5.5 (Chicago Fire Code Submittal Template)**: **IN PROGRESS**.
   - *Status*: Chicago Title 14B submittal template rendering scaffolded against `NFPA13-2019` ruleset.
+
+
+---
+
+## 7. Sprint 5.2 Discriminator Test & Sprint Status Commitments (Week 6 Resolutions)
+
+### Sprint 5.2 Discriminator Test (`benchmark/storage_discriminator_test_report.json` — R-63 Resolved)
+- **Test Setup**: Evaluated a non-compliant variant of Firm B’s warehouse model with `esfr_operating_heads_count = 11` (violating mandatory 12-head requirement under `NFPA13-STORAGE-R02` clause 23.3.2).
+- **Result**: Rule engine returned **FAIL** with specific rule `NFPA13-STORAGE-R02` firing. Confirms active rule evaluation.
+- **Hydraulic Calc Labeling**: The $0.081\%$ flow deviation is the R-59 baseline re-validated under the 25-rule integration.
+
+### Coverage Matrix Scope Correction (R-64 Resolved)
+- Updated `core/rules/coverage_matrix.md` replacing "Fully Covered" with *"Firm B Warehouse Configuration Covered (Class III, 25-ft storage, ESFR K-16.8); general high-piled storage deferred per §6.0 scope list"*.
+
+### Forward Sprint Commitments (R-65, R-66 Resolved)
+- **Sprint 5.3 (Production IoT Pipeline - R-65 Resolved)**:
+  - *Production Start Date*: **January 15, 2027**.
+  - *Scope*: mTLS 1.3 client certificates, RBAC, 10 Hz rate limiting, TimescaleDB retention, and external pentest audit.
+- **Sprint 5.4 (FDNY Template - R-66 Resolved)**:
+  - *Validation Approach*: Built against reconstructed 2019 FDNY Building Code submittal checklists tagged `[~]` per standing provenance policy. Validation via PE review prior to Phase 5 close.
+- **Sprint 5.5 (Chicago Title 14B Template - R-66 & R-67 Resolved)**:
+  - *Validation Approach*: Built against reconstructed Chicago Title 14B (Fire Prevention) requirements tagged `[~]` (correcting pre-Phase 5 Ch 15-16 references). Validation via PE review prior to Phase 5 close.
