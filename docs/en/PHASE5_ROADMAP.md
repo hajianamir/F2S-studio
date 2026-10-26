@@ -147,3 +147,21 @@ Phase 5 engineering executes in parallel with the external Phase 4 LA County Mun
 > 3. IoT production pipeline meets full R-13 security scope and passes external pentest audit (Sprint 5.3 complete).
 > 4. GA positioning language is updated to reflect *"Templates Available, AHJ Validation Pending"* for FDNY/Chicago (Sprint 5.7 complete).
 > *Note*: Formal municipal submittal/approval of Firm B’s warehouse (Sprint 5.6) is an external Phase 6 or Phase 5 extension event and is NOT a blocking condition for Phase 5 software engineering exit.
+
+
+---
+
+## 9. Sprint 5.6 Exit Criterion, Pentest Standard & Package Independence (Week 8 Resolutions)
+
+### Sprint 5.6 Phase 5 Software Exit Criterion (R-71 Resolved - Option a)
+- **Software Exit Criterion**: Sprint 5.6 software exit is defined as *"Firm B warehouse calculation validated and 28-page package 100% complete and internally verified, ready for April 15 external submission"*.
+- **External Submission**: The physical April 15, 2027 submittal to LA County Fire Department is an external AHJ review event, analogous to Firm A’s Feb 15 submittal in Phase 4.
+
+### Sprint 5.3 External Pentest Exit Standard (R-72 Resolved)
+- **Exit Standard**: Sprint 5.3 software exit requires **zero Critical and zero High vulnerabilities** remaining unmitigated. Medium and Low findings may be accepted into a tracked Phase 6 security backlog with documented risk acceptance.
+
+### Firm A & Firm B Package Independence (R-73 Resolved)
+- **Independent Release Freezing**: Submittal packages are frozen independently on dedicated Git release tags:
+  - Firm A (Feb 15, 2027): Frozen on tag `v1.0.0-phase4-frozen`.
+  - Firm B (April 15, 2027): Frozen on tag `v1.1.0-phase5-firmb-frozen`.
+- **Isolation**: Platform core or template updates in Phase 5 do NOT retroactively modify or invalidate Firm A’s frozen submittal artifact.
