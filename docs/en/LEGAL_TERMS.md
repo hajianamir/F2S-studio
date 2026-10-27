@@ -26,3 +26,7 @@
 ## 3. Data Processing Addendum (DPA) & AEC Confidentiality
 - **Data Isolation**: Strict Row-Level Security (RLS) and schema-per-tenant isolation prevent cross-tenant data access.
 - **Data Retention & Deletion**: Upon contract termination, customer data is exportable for 30 days and purged within 60 days, excluding immutable audit log hashes required by law.
+
+
+## 4. GDPR IP Address Retention Note
+- IP address 7-year audit logging applies strictly to US Stage 1 operations under legitimate interest for legal chain-of-custody. A formal GDPR DPIA review will be required prior to EU deployment.
