@@ -11,7 +11,9 @@
 - **Professional Engineer (PE) Plan ($499 / month per seat)**: Solo PE license for individual consultants.
 - **Small-Team Plan ($349 / month per seat — R-103 Resolved)**: Designed for 2 to 4 seat firms, bridging solo PE and Enterprise tiers.
 - **Enterprise Firm Plan ($2,499 / month per firm — $250/seat at 10 seats)**: Includes up to 10 seats ($199/mo per additional seat), dedicated schema isolation, custom domain, and priority support.
-- **Beta Firm Transition Terms & Unconditioned Perpetual Discount (R-97 Resolved)**: Beta Firms A & B receive an **unconditioned perpetual 50% discount** off list price on their selected tier ($1,249/mo Enterprise or $174.50/seat Team) as consideration for early validation and MOU partnership.
+- **Beta Firm Transition Terms & Unconditioned Perpetual Discount (R-97 Resolved)**:
+  - Beta Firms A & B receive an **unconditioned perpetual 50% discount** off list price on their selected tier ($1,249/mo Enterprise or $174.50/seat Team) as consideration for early validation and MOU partnership.
+  - *Communication Status*: Formal written confirmation of the 50% perpetual commercial discount was transmitted to the principals of Beta Firms A & B alongside the Phase 4/5 roadmap updates, strengthening beta firm alignment prior to the January 2027 live portal onboarding.
 - **Target Customer Positioning**: Designed for AEC/FPE firms running 3+ disconnected tools who value an integrated workflow saving 15+ hours/project over single-purpose desktop tools.
 
 ---
