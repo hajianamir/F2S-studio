@@ -1,0 +1,23 @@
+{
+  "jurisdiction": "New York City Fire Department (FDNY)",
+  "building_code_edition": "2019 NYC Building Code / FC Chapter 9",
+  "applicable_standard": "NFPA 13 (2019 Edition) [~]",
+  "provenance_tag": "[~] Reconstructed from NYC FDNY Plan Examination Checklists",
+  "header_blocks": {
+    "title": "FDNY FIRE SPRINKLER SHOP DRAWING & HYDRAULIC CALCULATION SUBMITTAL",
+    "reference_tag": "NYC Administrative Code Title 29 / 2019 FC \u00a7903.3",
+    "pe_seal_block": {
+      "required": true,
+      "ny_license_format": "NY PE License #XXXXXX",
+      "sha256_hash_hex_required": true
+    }
+  },
+  "sections": [
+    "Cover Sheet & NYC Building Dept BIS Job Number",
+    "Hydraulic Calculation Summary & City Water Main Pressure Test",
+    "Pipe & Node Schedule with Schedule 40 Steel Pipe C-120",
+    "Sprinkler Head Schedule & Orifice Size",
+    "FDNY BCF 3D Coordination & Inspection Index"
+  ],
+  "status": "SCAFFOLDED & RENDER VERIFIED (Sprint 5.4 Complete)"
+}

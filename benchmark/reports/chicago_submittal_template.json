@@ -1,0 +1,23 @@
+{
+  "jurisdiction": "Chicago Fire Department (CFD) / Dept of Buildings",
+  "building_code_edition": "Chicago Municipal Code Title 14B (Fire Prevention)",
+  "applicable_standard": "NFPA 13 (2019 Edition) [~]",
+  "provenance_tag": "[~] Reconstructed from Chicago Title 14B Plan Examination Checklists",
+  "header_blocks": {
+    "title": "CITY OF CHICAGO FIRE PROTECTION SYSTEM SUBMITTAL PACKAGE",
+    "reference_tag": "Chicago Municipal Code Title 14B \u00a714B-9-903",
+    "pe_seal_block": {
+      "required": true,
+      "il_license_format": "IL SE/PE License #XXXXXX",
+      "sha256_hash_hex_required": true
+    }
+  },
+  "sections": [
+    "Cover Sheet & Chicago Building Permit Application Number",
+    "Hydraulic Loss Summary & Water Department Flow Test Data",
+    "Pipe Velocity Schedule (<= 20.0 ft/s limit)",
+    "Chicago Local Amendment Standpipe System Integration",
+    "BCF 3D Spatial Coordination Index"
+  ],
+  "status": "SCAFFOLDED & RENDER VERIFIED (Sprint 5.5 Complete)"
+}
