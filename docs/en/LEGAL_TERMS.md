@@ -1,3 +1,6 @@
+# Legal Requirements Specification for External Counsel Drafting
+**Terms of Service, MSA & Data Processing Addendum**
+
 # Terms of Service, Master Services Agreement (MSA) & Data Processing Addendum (DPA)
 **Fire Protection Design & Simulation Platform**
 
