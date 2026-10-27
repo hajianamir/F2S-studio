@@ -1,0 +1,23 @@
+version: "3.8"
+
+services:
+  web_ui:
+    image: fireplatform/web-ui:v1.0.0
+    ports:
+      - "80:80"
+      - "443:443"
+    environment:
+      - NODE_ENV=production
+      - API_URL=https://firm-a.fireplatform.com/api
+    restart: always
+
+  backend_api:
+    image: fireplatform/backend-api:v1.0.0
+    ports:
+      - "5000:5000"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Production
+      - DB_CONNECTION_STRING=Host=rds-postgres.internal;Database=fireplatform;Username=app_user;Password=SECURE_PWD
+      - KMS_KEY_ID=arn:aws:kms:us-west-2:123456789012:key/alias/fireplatform-stage1
+      - S3_BUCKET_NAME=fireplatform-stage1-bim-storage
+    restart: always
