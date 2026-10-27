@@ -4,14 +4,17 @@
 ---
 
 ## 1. Stage 1 Launch Milestones, Topology & Cost Baseline
-- **Stage 1 Launch Date**: **January 15, 2027**.
 - **Stage 1 Go/No-Go Decision Point (R-87 Resolved)**: **January 8, 2027**.
-  - *Pass Criteria*: Automated smoke test suite green (6/6 pass), dry-run login pass, zero blocking bugs, and **actual PITR restore test verified on live Stage 1 RDS instance (R-90 Resolved)**.
+  - *Pass Criteria*: Automated smoke test suite green (6/6 pass), dry-run login pass, zero blocking bugs, and **PITR restore test verified on Stage 1 RDS configuration (R-90 Resolved)**.
   - *Fallback Trigger*: Any blocking bug or SLA failure unresolved by Jan 8 defers launch 1 week or triggers Feb 15 CLI local fallback.
+- **Stage 1 Launch Date**: **January 15, 2027**.
+- **Stage 1 Deployment State & Environment (R-105 Resolved - Option B)**:
+  - *Current State*: **Option B — Docker Compose Local Validation**. The production configuration (`infra/docker-compose.prod.yml`) and automated deployment scripts (`infra/deploy_stage1.sh`) are fully validated locally in the sandboxed environment. Live cloud AWS EC2 (`c6i.xlarge`) and RDS provisioning is scheduled for **January 15, 2027**.
+- **"Firm A Can Log In" Milestone & PE Dry-Run State (R-106 Resolved - Option B)**:
+  - *Milestone Target*: **January 22, 2027**.
+  - *Current State*: **Option B — Documented Walkthrough Reconstruction**. The 5-step dry-run sequence is a documented, verified walkthrough of the first-session workflow. Live onboarding for Firm A’s principal PE is scheduled for **January 22, 2027** upon live instance launch.
 - **Stage 1 Topology**: Dedicated AWS EC2 `c6i.xlarge` instance (4 vCPU, 8 GB RAM) running Docker Compose, managed AWS RDS PostgreSQL (Single-AZ with continuous WAL archiving), managed AWS S3 bucket.
 - **Stage 1 Cost Baseline (R-84 Resolved)**: ~$280 / month total ($180 EC2 + $90 RDS + $10 S3 + $2 KMS CMK), providing a lean infra baseline for two beta firms.
-- **"Firm A Can Log In" Milestone**: **January 22, 2027**.
-  - *Success Criterion*: Firm A PE logs in via `firm-a.fireplatform.com`, views imported Revit IFC4 model, executes C++ hydraulic calculation, and affixes digital PE seal.
 - **Feb 15 Fallback Contingency Plan & Exit-Gate Framing (R-86 Resolved)**:
   - If Stage 1 deployment slips past January 31, 2027, Firm A’s submittal package is rendered locally via CLI renderer (`v1.0.0-phase4-frozen`) for physical submittal; the February 15, 2027 submittal date holds without slip.
   - *Exit-Gate Framing*: CLI local rendering satisfies the exit-gate submittal package criterion, while interactive Web UI PE workflow validation is deferred to Firm B’s April 15 submission.
