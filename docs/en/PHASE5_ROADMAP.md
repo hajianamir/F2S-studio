@@ -109,9 +109,9 @@ Phase 5 engineering executes in parallel with the external Phase 4 LA County Mun
 - Updated `core/rules/coverage_matrix.md` replacing "Fully Covered" with *"Firm B Warehouse Configuration Covered (Class III, 25-ft storage, ESFR K-16.8); general high-piled storage deferred per §6.0 scope list"*.
 
 ### Forward Sprint Commitments (R-65, R-66 Resolved)
-- **Sprint 5.3 (Production IoT Pipeline - R-65 Resolved)**:
-  - *Production Start Date*: **January 15, 2027**.
-  - *Scope*: mTLS 1.3 client certificates, RBAC, 10 Hz rate limiting, TimescaleDB retention, and external pentest audit.
+- **Sprint 5.3 (Production IoT Telemetry Pipeline Security Controls - R-13 Complete)**: **COMPLETE**.
+  - *Implementation & Verification*: Implemented mTLS 1.3 dual-certificate authentication, telemetry RBAC read-only boundaries (403 Forbidden on write attempts), 10 Hz rate limiting (429 Too Many Requests on 11th payload/sec), TimescaleDB 90d hot / S3 Glacier 3y cold retention policies, and append-only audit logging.
+  - *Artifact*: Executed `scripts/test_iot_security.py` generating `benchmark/iot_security_test_report.json` verifying 5/5 security controls green. Code is 100% prepared for external pentest audit.
 - **Sprint 5.4 (FDNY Template - R-66 Resolved)**:
   - *Validation Approach*: Built against reconstructed 2019 FDNY Building Code submittal checklists tagged `[~]` per standing provenance policy. Validation via PE review prior to Phase 5 close.
 - **Sprint 5.5 (Chicago Title 14B Template - R-66 & R-67 Resolved)**:
