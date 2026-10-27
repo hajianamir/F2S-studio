@@ -49,7 +49,7 @@
     4. PDF Report Generator (`POST /api/report/generate`)
     5. KMS Digital Seal Vault Round-Trip Signing & Verification
     6. BCF 3D Annotation Persistence Test
-  - *Scope Clarification (R-93 Resolved)*: The 6/6 smoke test verifies functional operation. Comprehensive security verification is managed separately via database RLS cross-tenant tests (complete), Sprint 5.3 external pentest audit (pending), and KMS seal vault authorization reviews.
+  - *Scope Clarification (R-93 Resolved)*: The 6/6 smoke test verifies functional operation. Comprehensive security verification is managed separately via database RLS cross-tenant tests (complete), Sprint 5.3 external pentest audit (pending), and KMS seal vault authorization reviews (formally included in Sprint 5.3 external pentest audit scope - R-94a Resolved).
 
 ---
 
