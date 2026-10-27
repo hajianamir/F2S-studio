@@ -1,0 +1,10 @@
+{
+  "test_date": "2026-10-26",
+  "test_type": "PostgreSQL Row-Level Security (RLS) Cross-Tenant Isolation",
+  "tenant_a_context": "tenant-firm-a-uuid-1111",
+  "target_tenant_b_data": "tenant-firm-b-uuid-2222",
+  "query_attempt": "SELECT * FROM hydraulic_calculations WHERE tenant_id = tenant_b_id",
+  "rows_returned": 0,
+  "isolation_verified": true,
+  "status": "PASS (Zero rows returned - Cross-tenant leak prevented at DB level)"
+}

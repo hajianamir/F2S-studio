@@ -1,43 +1,26 @@
-# Production Deployment & Multi-Tenancy Architecture (Path 1 Adoption)
+# Production Deployment & Multi-Tenancy Architecture (Path 1 Execution)
 **Fire Protection Design & Simulation Platform**
 
 ---
 
-## 1. Staged Deployment Strategy: Path 1 Adoption (Beta-First Deployment)
-To ensure Firm A’s Feb 15, 2027 and Firm B’s April 15, 2027 submittals operate on a rock-solid, live cloud environment without over-engineering ops overhead, the platform adopts **Path 1 (Staged Pragmatic Deployment)**:
-
-- **Stage 1 (Phase 5 Live Beta — January 2027)**:
-  - *Topology*: Managed Cloud VM Cluster (Docker Compose / Managed Kubernetes Node), Managed PostgreSQL, Managed S3 storage.
-  - *Tenant Isolation*: Dedicated schema-per-tenant isolation fortified with PostgreSQL Row-Level Security (RLS).
-  - *Goal*: Zero operational complexity, deployed in 1 week, live access for Firm A & B PEs by January 2027.
-- **Stage 2 (Phase 6 Scale Architecture — Post-Paying Customer)**:
-  - *Topology*: Full EKS/GKE Multi-AZ, per-tenant KMS CMKs, 7-year WORM storage, automated failover. Activated upon signing the first commercial paying customer beyond beta MOUs.
+## 1. Stage 1 Launch Milestones, Fallback & Topology
+- **Stage 1 Launch Date**: **January 15, 2027**.
+- **Stage 1 Topology**: Dedicated AWS EC2 `c6i.xlarge` instance running Docker Compose, managed AWS RDS PostgreSQL (Single-AZ with daily automated snapshots), managed AWS S3 bucket.
+- **"Firm A Can Log In" Milestone**: **January 22, 2027**.
+  - *Success Criterion*: Firm A PE logs in via `firm-a.fireplatform.com`, views imported Revit IFC4 model, executes C++ hydraulic calculation, and affixes digital PE seal.
+- **Feb 15 Fallback Contingency Plan**: If Stage 1 deployment slips past January 31, 2027, Firm A’s submittal package is rendered locally via CLI renderer (`v1.0.0-phase4-frozen`) for physical submittal; the February 15, 2027 submittal date holds without slip.
 
 ---
 
-## 2. Security Addendum: RLS, PE Seal Vault & Data Isolation (R-76, R-78 Resolved)
-
-### PostgreSQL Row-Level Security (RLS) Policies
-- In addition to schema-per-tenant isolation, database connections enforce `tenant_id` session variables.
-- RLS policies prevent cross-tenant data leakage even in the event of an application-layer query bug.
-
-### PE Seal Vault & Legal Signature Security
-- Digital PE seals and private signing keys are encrypted at rest using KMS-wrapped AES-256 keys inside a dedicated HSM/Seal Vault.
-- Every electronic signature invocation generates a immutable audit log record including timestamp, user ID, SHA-256 calculation hash, and IP address.
-- PEs retain revocation authority to invalidate improperly affixed seals.
+## 2. RLS Cross-Tenant Test Result (`benchmark/rls_security_test_report.json`)
+- **Script**: `scripts/test_rls_security.py` (Automated cross-tenant leak test).
+- **Test Result**: Tenant A context executed `SELECT * FROM hydraulic_calculations WHERE tenant_id = tenant_b_id`.
+- **Outcome**: **Zero rows returned** at database level via PostgreSQL Row-Level Security (`app.current_tenant_id` session isolation). Verified!
 
 ---
 
-## 3. Verified Backup Restoration SLA Test Report (R-77 Resolved)
-
-- **Script**: `scripts/restore_test.py` (Simulated WAL point-in-time recovery and database restoration).
-- **Test Results (`benchmark/backup_restore_test_report.json`)**:
-  - *RPO Verification*: **12.4 minutes** (Clears $< 15 \\text{ min}$ SLA requirement).
-  - *RTO Verification*: **38.2 minutes** (Clears $< 1 \\text{ hour}$ SLA requirement).
-- **Status**: **R-77 Closed**.
-
----
-
-## 4. Municipal Submittal Template Provenance (R-80 Resolved)
-
-- **FDNY & Chicago Templates**: Explicitly tagged `[~]` as reconstructed from published municipal plan examination guidelines. Format validation is formally deferred to first live submittal in Phase 6.
+## 3. HSM Choice & PE Seal Revocation Workflow
+- **Stage 1 HSM Choice**: **AWS KMS Custom Key Store** (FIPS 140-2 Level 3 compliant). AWS CloudHSM dedicated cluster deferred to Stage 2 commercial scale.
+- **PE Seal Revocation Workflow**:
+  - *Authority*: PE of Record retains sole revocation authority over their electronic seal.
+  - *Execution*: Revoking a seal immediately invalidates future signing requests and appends a revocation notice to the BCF audit log. Historical submittal package SHA-256 hashes remain immutable in audit storage for legal chain-of-custody verification.
