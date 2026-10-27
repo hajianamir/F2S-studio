@@ -34,20 +34,22 @@
 ---
 
 ## 3. Pre-Launch Configuration Checklist (Auth Hygiene, DNS/SSL & Expanded Smoke Tests)
-- **Auth Hygiene Policy (R-88 Resolved)**:
+- **Auth Hygiene Policy & Step-Up Auth (R-88, R-92 Resolved)**:
   - *Password Policy*: Minimum 12 characters, requiring uppercase, lowercase, numbers, and symbols; no common password reuse.
   - *Account Lockout*: 5 consecutive failed login attempts trigger a 15-minute lockout to prevent brute-force attacks.
-  - *Session Timeout*: 30 minutes of idle inactivity forces automatic re-authentication to protect PE seal credentials on unattended devices.
+  - *Session Timeout*: 30 minutes of idle inactivity forces automatic re-authentication.
+  - *Step-Up Authentication for PE Seal (R-92 Resolved)*: Seal signing requires mandatory TOTP re-verification immediately prior to affixing the PE digital seal, independent of active session state, preventing unauthorized seal usage if a device is left unattended.
   - *SSO Deferral*: Enterprise Single Sign-On (SSO / SAML / OIDC) is explicitly deferred to Phase 6.
 - **DNS & SSL Provisioning**: AWS Route53 DNS + AWS ACM wildcard SSL certificate (`*.fireplatform.com`) with automated renewal.
-- **Expanded Smoke Test Suite (`benchmark/stage1_smoke_test_report.json` — R-89 Resolved)**:
-  - Executed via `scripts/stage1_smoke_test.py` covering 6/6 test cases:
+- **Expanded Smoke Test Suite & Security Boundary Scope (`benchmark/stage1_smoke_test_report.json` — R-89, R-93 Resolved)**:
+  - Executed via `scripts/stage1_smoke_test.py` covering 6/6 functional test cases:
     1. Healthcheck Endpoint (`GET /api/health` -> 200 OK)
     2. Auth API & TOTP MFA Verification (`POST /api/auth/login`)
     3. Core C++ Hydraulic Solver Interop (`POST /api/calc/hydraulic`)
     4. PDF Report Generator (`POST /api/report/generate`)
-    5. **KMS Digital Seal Vault Round-Trip Signing & Verification (R-89 Resolved)**
-    6. **BCF 3D Annotation Persistence Test (R-89 Resolved)**
+    5. KMS Digital Seal Vault Round-Trip Signing & Verification
+    6. BCF 3D Annotation Persistence Test
+  - *Scope Clarification (R-93 Resolved)*: The 6/6 smoke test verifies functional operation. Comprehensive security verification is managed separately via database RLS cross-tenant tests (complete), Sprint 5.3 external pentest audit (pending), and KMS seal vault authorization reviews.
 
 ---
 
