@@ -179,3 +179,36 @@ Phase 5 engineering executes in parallel with the external Phase 4 LA County Mun
 - **Critical Vulnerabilities**: **Hard Blocking Gate** — Must be 100% remediated prior to Phase 5 software exit.
 - **High Vulnerabilities**: Require zero unmitigated High findings. If a High finding cannot be remediated within Sprint 5.3 time-box, it may be accepted **ONLY** with a documented compensating control (e.g., mTLS boundary, WAF filtering, 10 Hz rate limiting) and formal sign-off by the CTO or designated Security Lead. The PE of record may be consulted regarding compensating control impact on fire protection functionality, but security risk acceptance is strictly signed by the executive with cybersecurity authority.
 - **Medium & Low Vulnerabilities**: Logged to a tracked Phase 6 security backlog.
+
+
+---
+
+## 11. Sprint 5.3 Technical Deep-Dive & Security Verification (R-108 to R-114 Resolved)
+
+### mTLS 1.3 Certificate Lifecycle (R-108 Resolved)
+- **Min Version Enforcement**: Strictly enforced `TLSv1.3` (TLS 1.2 disabled).
+- **CA & Issuance**: Private CA managed via AWS Private CA; automated sensor cert issuance via bootstrap tokens.
+- **Rotation & Revocation**: 1-year certificate lifetime with automated renewal; OCSP stapling for real-time revocation checks.
+
+### RBAC Bidirectional Verification (R-109 Resolved)
+- **Positive Test**: Authorized reader role queries sensor telemetry -> returns `200 OK` with sensor dataset.
+- **Negative Test**: Unauthorized write/delete attempts -> returns `403 Forbidden`.
+
+### Rate Limiting Specification (R-110 Resolved)
+- **Identifier & Window**: mTLS Certificate CN identifier; sliding window algorithm.
+- **Limits**: $10 \\text{ Hz}$ per-sensor limit; $10,000 \\text{ req/s}$ aggregate system cap.
+- **Behavior**: Fail-closed mode for unauthenticated, fail-open with CloudWatch alerting for trusted sensors; returns `429 Too Many Requests` with `Retry-After: 1` header.
+
+### Retention Tiers & Unified Queries (R-111 Resolved)
+- **Telemetry Retention**: $90 \\text{ days}$ hot (TimescaleDB) $\\rightarrow$ $3 \\text{ years}$ cold (S3 Glacier). Unified query interface routes across both tiers seamlessly.
+- **Audit Log Retention**: Security & access logs retained for **7 years** (matching legal liability requirements).
+
+### Tier 3 WORM Audit Log Immutability (R-112 Resolved)
+- **Enforcement Tier**: **Tier 3 External WORM Storage** using S3 Object Lock in Compliance Mode.
+- **Cryptographic Chaining**: Append-only log entries contain SHA-256 hash chains. Direct `DELETE`/`UPDATE` calls are blocked at the S3 bucket policy level, returning `403 Access Denied`.
+
+### Bidirectional Security Test Suite (R-113 Resolved)
+- Verified that all 5 test cases in `scripts/test_iot_security.py` execute both positive (should succeed) and negative (should fail safely) assertions (`benchmark/iot_security_test_report.json`).
+
+### Sprint 5.3 Status Label (R-114 Resolved)
+- **Official Status**: **Implementation Complete; Pending External Penetration Test Audit for Sprint Closure**.
