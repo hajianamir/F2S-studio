@@ -70,3 +70,7 @@
   - *Execution*: Revoking a seal invalidates future signing requests and appends a revocation notice to the BCF audit log. Historical submittal SHA-256 hashes remain immutable in audit storage.
   - *Downstream AHJ Notification*: Platform generates an official **Signed Revocation Certificate** for the PE to file directly with the municipal AHJ if a sealed package was previously submitted.
 - **Data Export & Portability (R-85 Resolved)**: Tenants retain 100% data ownership and can export full BIM IFC4 models, BCF annotation logs, and raw hydraulic JSON data via authenticated S3 download links or REST API endpoints.
+
+- **S3 Audit Bucket Isolation & Compliance Mode Operational Notes**:
+  - *Audit Bucket Isolation*: The audit S3 bucket is strictly dedicated to audit log entries; bucket policy rejects PUTs with any object prefix other than `audit/` to prevent accidental non-audit data locks.
+  - *Retention Irreversibility*: The 7-year Compliance Mode Object Lock retention is legally irreversible on existing objects once written; counsel review of retention periods was confirmed prior to production audit writes.
