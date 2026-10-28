@@ -212,3 +212,17 @@ Phase 5 engineering executes in parallel with the external Phase 4 LA County Mun
 
 ### Sprint 5.3 Status Label (R-114 Resolved)
 - **Official Status**: **Implementation Complete; Pending External Penetration Test Audit for Sprint Closure**.
+
+
+### Rate Limiting Redis Fail-Mode & CN Continuity (R-110 Final Resolution)
+- **Redis Fail-Mode**: If Redis counter backing store becomes unavailable, rate limiting operates **fail-open** for authenticated mTLS sensors with immediate high-priority CloudWatch alerting (preventing critical telemetry loss while alerting ops). Unauthenticated requests remain fail-closed.
+- **CN Continuity**: Rate limit counters are keyed directly on the mTLS Certificate CN (`sensor-id`), persisting state seamlessly across annual certificate renewals.
+
+### Retention Transition Verification & Purge Policy (R-111 Final Resolution)
+- **Transition Verification**: TimescaleDB (90d hot) -> S3 Glacier (3y cold) transition was verified using backdated time-travel test records.
+- **Unified Query Routing**: Queries across hot/cold boundaries return a single unified dataset seamlessly.
+- **Purge Policy**: Telemetry records exceeding 3 years trigger an automated S3 lifecycle purge with an audit log entry. Security/access audit logs are retained for **7 years (2,555 days)**.
+
+### S3 Object Lock Default Retention & Hash Chain Read Verification (R-112 Final Resolution)
+- **Default Retention Rule**: Bucket-level default retention rule is set to **7 years (2,555 days) in Compliance Mode**. Every PUT automatically inherits 7-year WORM protection without relying on app-level headers.
+- **Read Verification**: Audit log read queries verify the SHA-256 cryptographic hash chain across sequential entries, raising a critical alert if any link is broken.
